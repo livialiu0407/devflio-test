@@ -1,20 +1,40 @@
 // COLORS
-$primary-color: #fde8ed;      // 1. Soft Blush Pink
-$secondary-color: #5b86e5;    // Accent Blue
+$primary-color: #fde8ed;
+$secondary-color: #5b86e5;
 $font-family: "Montserrat", sans-serif;
 
-// Your Custom Colorful Palette
-$color-blush-pink: #fde8ed;   // 1. Soft Pink
-$color-lavender: #f1e1f7;     // 2. Soft Lavender/Purple
-$color-sky-blue: #d7e8f4;     // 3. Soft Sky Blue
-$color-mint-green: #d6efd5;   // 4. Soft Mint Green
-$color-butter-yellow: #fdfdd4; // 5. Soft Butter Yellow
+// Your 5 Soft Pastel Palette Colors
+$color-blush-pink: #fde8ed;   // 1. Hero
+$color-lavender: #f1e1f7;     // 2. About Me
+$color-sky-blue: #d7e8f4;     // 3. Publications & Research
+$color-mint-green: #d6efd5;   // 4. Beyond Academia
+$color-butter-yellow: #fdfdd4; // 5. Contact
 
 $light-white: #e5e5e5;
 $white-color: #ffffff;
 $dark-grey: #333333;
+$dark-blue-text: #272341;
 
-$dark-blue-text: #272341; // For headings
+/* Apply 5 Colors to Each Section Background */
+#hero {
+  background-color: $color-blush-pink !important;
+}
+
+#about {
+  background-color: $color-lavender !important;
+}
+
+#projects, #publications {
+  background-color: $color-sky-blue !important;
+}
+
+#beyond-academia {
+  background-color: $color-mint-green !important;
+}
+
+#contact {
+  background-color: $color-butter-yellow !important;
+}
 
 // FONT SIZE
 $default-font-size: 1.6rem;
