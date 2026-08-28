@@ -1,6 +1,6 @@
 <!-- HELLO
 -
-DevFolio is a minimal, clean, lightweight and fully responsive template for Devlopers!
+DevFolio is a minimal, clean, lightweight and fully responsive template for Developers!
 Created by Anil Seervi.
 -
 GitHub repo: https://github.com/AnilSeervi/DevFolio
@@ -10,40 +10,6 @@ Have fun creating your portfolio on this template!!! -->
 
 <!DOCTYPE html>
 <html lang="en">
-
-  <style>
-  #hero { background-color: #fde8ed !important; }
-  #about { background-color: #f1e1f7 !important; }
-  #projects, #publications { background-color: #d7e8f4 !important; }
-  #beyond-academia { background-color: #d6efd5 !important; }
-  #contact { background-color: #fdfdd4 !important; }
-</style>
-  
-  <style>
-  /* Forces the About Me card container to center content cleanly */
-  .about-mf .box-shadow-full {
-    margin: 0 auto !important;
-    width: 100% !important;
-  }
-
-  /* Removes narrow width limits on bio paragraphs */
-  .about-me .lead {
-    max-width: 100% !important;
-    width: 100% !important;
-    font-size: 2.1rem !important;
-    line-height: 1.0 !important;
-    
-  }
-
-  /* Ensures images do not overflow their containers */
-  .about-img img {
-    max-width: 200px !important;
-    height: auto !important;
-    margin: 0 auto 15px auto !important;
-    display: block !important;
-  }
-</style>
-  
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -51,340 +17,205 @@ Have fun creating your portfolio on this template!!! -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-    <!-- Title: add your Portfolio websites's title here -->
+    <!-- Title -->
     <title>Xiaoran (Livia) Liu | PhD Student & Researcher</title>
 
-    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
     <meta name="keywords" content="Xiaoran Liu, Livia Liu, NYU Silver, Social Work PhD, Mental Health AI, Computational Social Science" />
-
-    <!-- Improve your SEO by adding a small descrption of you -->
     <meta name="description" content="Xiaoran (Livia) Liu | Doctoral Student & Researcher at NYU Silver School of Social Work." />
 
-    <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
     <link rel="icon" type="image/png" href="./assets/android-chrome-192x192.png">
-    <!-- Add your primary-theme color for the value of content -->
     <meta name="theme-color" content="#ee9ca7" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <!-- Fill content with the URL of this portfolio you'll host -->
     <meta property="og:url" content="https://devfolio.js.org/" />
-    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
-    <meta property="og:title" content="[Your name here] | Developer" />
-    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
-    <meta property="og:description" content="Made using DevFolio Template" />
-    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
-      so that a thumbnail image of your portfolio is shown while shared on other platform -->
-    <meta
-      property="og:image"
-      content="https://devfolio.js.org/assets/devfolio.png"
-    />
+    <meta property="og:title" content="Xiaoran (Livia) Liu | PhD Student & Researcher" />
+    <meta property="og:description" content="Doctoral Student & Researcher at NYU Silver School of Social Work" />
+    <meta property="og:image" content="https://devfolio.js.org/assets/devfolio.png" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <!-- Again fill content attr with the URL of this portfolio you'll host -->
-    <meta property="twitter:url" content="https://devfolio.js.org" />
-    <!-- Recommended to use the same text used within <title> element -->
-    <meta property="twitter:title" content="[Your name here] | Developer" />
-    <!-- short description that shows up while your portfolio is shared -->
-    <meta
-      property="twitter:description"
-      content="Made using DevFolio Template"
-    />
-    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
-    <meta
-      property="twitter:image"
-      content="https://anilseervi.vercel.app/assets/devfolio.png"
-    />
-
-    <!-- link tags -->
+    <!-- Link Tags -->
     <link rel="preload" as="style" href="./css/main.css" />
     <link rel="stylesheet" href="./css/main.css" />
 
-    <!-- FontAwesome Icons link -->
+    <!-- FontAwesome Icons -->
     <link
       rel="stylesheet"
-      href="./assets/android-chrome-192x192.pn"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
 
-    <!-- Remove Google Analytics once you have your portfolio website set-up -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag("js", new Date())
+    <!-- Custom Style Overrides -->
+    <style>
+      #hero { background-color: #fde8ed !important; }
+      #about { background-color: #f1e1f7 !important; }
+      #projects, #publications { background-color: #d7e8f4 !important; }
+      #beyond-academia { background-color: #d6efd5 !important; }
+      #contact { background-color: #fdfdd4 !important; }
 
-      gtag("config", "UA-122228201-4")
-    </script>
-    <!-- End of Google Analytics -->
+      .about-mf .box-shadow-full {
+        margin: 0 auto !important;
+        width: 100% !important;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 16px;
+      }
+
+      .about-me .lead {
+        max-width: 100% !important;
+        width: 100% !important;
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+        color: #333333;
+      }
+
+      .about-img img {
+        max-width: 220px !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 15px auto !important;
+        display: block !important;
+        border-radius: 12px;
+      }
+    </style>
   </head>
   <body>
+
     <!-- Hero Section -->
-    
-        <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg.jpg)">
-  <div class="overlay-itro"></div>
-  <div class="hero-content display-table">
-    <div class="table-cell">
+    <section id="hero" class="jumbotron">
       <div class="container">
         
-    
-        
-        <!-- INSERT YOUR FIRST-PAGE DISPLAY ICON / BADGE HERE -->
-        <div class="hero-icon mb-3">
-          <img src="Icon pic with dogs.jpeg" style="max-width: 80px; height: auto;">
+        <!-- Icon Badge -->
+        <div class="hero-icon mb-3" style="text-align: center;">
+          <img src="./assets/Icon pic with dogs.jpeg" alt="Icon" style="max-width: 100px; height: auto; border-radius: 50%;">
         </div>
-        <h1 class="hero-title mb-4">Xiaoran (Livia) Liu</h1>
-        <p class="hero-subtitle"><span class="typed" data-typed-items="PhD Student, Researcher, Social Work & AI"></span></p>
-      </div>
-    </div>
-  </div>
-</div>
+
         <h1 class="hero-title">
-          Hi, my name is <span class="text-color-main name">Xiaoran (Livia)</span>
+          Hi, my name is <span class="text-color-main name">Xiaoran (Livia) Liu</span>
           <br />
-          I'm a PhD Student & Researcher @ NYU.
+          I'm a PhD Student & Researcher @ NYU Silver.
         </h1>
         <p class="hero-cta">
-          <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+          <a class="cta-btn cta-btn--hero" href="#about">Get to know me</a>
         </p>
-      </section>
+      </div>
       <a href="#about" class="scroll-down-link" aria-label="scroll-down">
-        <div class="scroll-down"></div
-      ></a>
-    </div>
+        <div class="scroll-down"></div>
+      </a>
+    </section>
     <!-- /END Hero Section -->
 
 
-<!-- =================================================== -->
-  <!-- 1. ABOUT ME SECTION                                 -->
-  <!-- =================================================== -->
-  <section id="about" class="about-mf sect-pt4 route">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="box-shadow-full">
-            <div class="row">
-              
-              <!-- Left Column: Image & Details -->
-              <div class="col-md-5 mb-4 mb-md-0">
-                <div class="about-img text-center mb-3">
-                  <img src="assets/att.MyBoZk40ZwI1MlLLWXt1rjefdOtGsXuYcGhXUdxvbHA.jpeg" class="img-fluid rounded b-shadow-a" alt="Profile Picture" style="max-width: 800px; width: 400%;">
-                </div>
-                <div class="about-info">
-                  <p><strong class="title-s">Role: </strong><span>PhD Student / Researcher</span></p>
-                  <p><strong class="title-s">Institution: </strong><span>NYU Silver School of Social Work</span></p>
-                  <p><strong class="title-s">Focus: </strong><span>NLP, Mental Health Equity & Clinical AI</span></p>
-                </div>
-              </div>
-
-              <!-- Right Column: Bio Summary -->
-              <div class="col-md-7">
-                <div class="about-me">
-                  <div class="title-box-2 mb-3">
-                    <h5 class="title-left">About Me</h5>
-                  </div>
-    
-                    <p style="width: 100%; max-width: 100%; font-size: 1.1rem; line-height: 1.6; text-align: left;">
-                    I am a PhD student at the NYU Silver School of Social Work. My background bridges empirical research in affective neuroscience with direct clinical social work in inpatient psychiatric settings.
-                  </p>
-                  <p style="width: 100%; max-width: 100%; font-size: 1.1rem; line-height: 1.6; text-align: left;">
-                    My work focuses on leveraging human-centered technology and natural language processing (NLP) to promote mental health equity, understand cultural help-seeking behaviors, and inform ethically grounded social work practice.
-                  </p>
-                </div>
-              </div>
-
+    <!-- About Me Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row about-wrapper">
+          
+          <!-- Profile Picture -->
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__image">
+              <img
+                class="img-fluid rounded shadow-lg"
+                height="auto"
+                width="300px"
+                src="./assets/att.MyBoZk40ZwI1MlLLWXt1rjefdOtGsXuYcGhXUdxvbHA.jpeg"
+                alt="Profile Picture"
+              />
             </div>
           </div>
+
+          <!-- Bio Details -->
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__info">
+              <p class="about-wrapper__info-text">
+                I am a PhD student at the NYU Silver School of Social Work. My background bridges empirical research in affective neuroscience with direct clinical social work in inpatient psychiatric settings.
+              </p>
+              <p class="about-wrapper__info-text">
+                My work focuses on leveraging human-centered technology and natural language processing (NLP) to promote mental health equity, understand cultural help-seeking behaviors, and inform ethically grounded social work practice.
+              </p>
+              <span class="d-flex mt-3">
+                <a target="_blank" class="cta-btn cta-btn--resume" href="#contact">
+                  Get in Touch
+                </a>
+              </span>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- /END About Me Section -->
 
 
-    
-    <!--Projects Section-->
+    <!-- Projects Section -->
     <section id="projects">
       <div class="container">
         <div class="project-wrapper">
           <h2 class="section-title dark-blue-text">Projects</h2>
 
-          <!-- Each .row is a project -->
+          <!-- Project 1 -->
           <article class="row">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">Project Title</h3>
               <p class="project-wrapper__text-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-                sint saepe nostrum! Enim, perferendis.
+                Description of your research project, computational modeling, or natural language processing analysis goes here.
               </p>
               <div class="project-wrapper__text-btns">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
+                <a href="#" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">See Live</a>
+                <a href="#" target="_blank" class="cta-btn text-color-main">Source Code</a>
               </div>
             </div>
-
             <div class="project-wrapper__image">
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <div class="thumbnail rounded">
-                  <img
-                    src="./assets/project.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
+                  <img src="./assets/project.png" class="img-fluid" alt="Project Image" width="1366" height="767" />
                 </div>
               </a>
             </div>
           </article>
-          <!-- /END Project -->
 
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Project Title</h3>
-              <p class="project-wrapper__text-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-                sint saepe nostrum! Enim, perferendis.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/project.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Project Title</h3>
-              <p class="project-wrapper__text-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-                sint saepe nostrum! Enim, perferendis.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  >Source Code</a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/project.png"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
         </div>
       </div>
     </section>
     <!-- End Projects Section -->
-    
-<!-- Section 4: Beyond Academia (Soft Mint Green Background) -->
-<section id="beyond-academia" class="about-mf sect-pt4 route" style="background-color: #d6efd5 !important; padding: 60px 0;">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="box-shadow-full" style="background: #ffffff; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-          
-          <!-- Section Title with Larger Font Size -->
-          <h2 class="title-a" style="font-size: 2.2rem; font-weight: 700; color: #272341; margin-bottom: 15px;">
-            Beyond Academia
-          </h2>
-          <div class="line-mf" style="width: 60px; height: 5px; background-color: #5b86e5; margin-bottom: 25px;"></div>
-          
-          <!-- Updated Bio Content -->
-          <p class="lead" style="font-size: 1.15rem; line-height: 1.8; color: #333333; margin-bottom: 30px;">
-            Outside of research and clinical work, I love spending time outdoors, whether hiking, camping, or kayaking with my two poodles, Phoebe and Powder. I am also passionate about wildlife rehabilitation and local bird rescue, caring for my three resident birds at home: Hope, Happy, and Blue.
-          </p>
 
-          <!-- Photo Container -->
-          <div style="text-align: center; margin-top: 20px;">
-            <img 
-              src="./assets/Photo w/Photo with dogs.jpeg" 
-              alt="Xiaoran (Livia) Liu with Phoebe and Powder" 
-              style="max-width: 100%; max-height: 480px; width: auto; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); object-fit: cover;" 
-            />
+
+    <!-- Beyond Academia Section -->
+    <section id="beyond-academia" style="padding: 60px 0;">
+      <div class="container">
+        <h2 class="section-title">Beyond Academia</h2>
+        <div class="row about-wrapper">
+          <div class="col-md-12 text-center">
+            <p class="lead" style="font-size: 1.15rem; line-height: 1.8; color: #333333; margin-bottom: 30px;">
+              Outside of research and clinical work, I love spending time outdoors, whether hiking, camping, or kayaking with my two poodles, Phoebe and Powder. I am also passionate about wildlife rehabilitation and local bird rescue, caring for my three resident birds at home: Hope, Happy, and Blue.
+            </p>
+            <div>
+              <img 
+                src="./assets/Photo w/Photo with dogs.jpeg" 
+                alt="Xiaoran (Livia) Liu with Phoebe and Powder" 
+                style="max-width: 100%; max-height: 440px; width: auto; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); object-fit: cover;" 
+              />
+            </div>
           </div>
-
         </div>
       </div>
-    </div>
-  </div>
-</section>
-    
+    </section>
+    <!-- End Beyond Academia Section -->
+
+
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="contact-wrapper">
-          <p class="contact-wrapper__text">[Put your call to action here]</p>
-          <a href="#" class="cta-btn cta-btn--resume">Call to Action</a>
+          <p class="contact-wrapper__text">Interested in collaborating on computational social science or digital mental health equity?</p>
+          <a href="mailto:your.email@nyu.edu" class="cta-btn cta-btn--resume">Email Me</a>
         </div>
       </div>
     </section>
     <!-- END Contact Section -->
+
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -393,76 +224,25 @@ Have fun creating your portfolio on this template!!! -->
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
         <div class="social-links">
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="twitter"
-          >
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="instagram"
-          >
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="codepen"
-          >
-            <i class="fa-brands fa-codepen"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="linkedin"
-          >
+          <a href="#!" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="github"
-          >
+          <a href="#!" target="_blank" rel="noopener noreferrer" aria-label="github">
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
         <hr />
         <p class="footer__text">
-          &copy; <span id="year"></span> - Template by
-          <a
-            href="https://github.com/AnilSeervi"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Anil Seervi</a
-          >. <br />Made with &hearts;
+          &copy; <span id="year"></span> - Xiaoran (Livia) Liu
         </p>
       </div>
     </footer>
     <!-- END Footer Section -->
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear()
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
     <script src="./javascript/vanilla-tilt.min.js"></script>
     <script type="text/javascript" src="./javascript/valtilt.js"></script>
-    
-    <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-
-  <!-- Template Main JS File (This controls all scroll animations!) -->
-  <script src="assets/js/main.js"></script>
   </body>
 </html>
