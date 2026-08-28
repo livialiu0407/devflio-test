@@ -148,100 +148,61 @@ Have fun creating your portfolio on this template!!! -->
     transform: translate(-80px, 50px) scale(1.12);
   }
 }
-      /* =========================================================
-   BEYOND ACADEMIA — Soft Organic Nature Background
+
+
+/* =========================================================
+   BEYOND ACADEMIA — Animated Pastel Gradient
    ========================================================= */
 
 #beyond-academia {
   position: relative;
   overflow: hidden;
-  background-color: #d6efd5 !important;
+
+  background: linear-gradient(
+    -45deg,
+    #d6efd5,
+    #e8f5df,
+    #dff3e8,
+    #eef8df
+  ) !important;
+
+  background-size: 400% 400%;
+
+  animation: beyondPastelGradient 18s ease infinite;
 }
 
-/* Keep the actual content above the background shapes */
+
+/* Keep the content above the animated background */
 #beyond-academia .container {
   position: relative;
-  z-index: 3;
-}
-
-/* Large soft organic shape */
-#beyond-academia::before {
-  content: "";
-  position: absolute;
-  width: 420px;
-  height: 280px;
-  left: -140px;
-  bottom: -100px;
-
-  background: rgba(255, 255, 255, 0.35);
-
-  border-radius: 60% 40% 55% 45%;
-  filter: blur(3px);
-
-  pointer-events: none;
-  z-index: 1;
-
-  animation: natureShape1 18s ease-in-out infinite;
-}
-
-/* Smaller soft organic shape */
-#beyond-academia::after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 230px;
-  right: -100px;
-  top: -70px;
-
-  background: rgba(170, 215, 165, 0.30);
-
-  border-radius: 45% 55% 40% 60%;
-  filter: blur(3px);
-
-  pointer-events: none;
-  z-index: 1;
-
-  animation: natureShape2 15s ease-in-out infinite;
+  z-index: 2;
 }
 
 
-/* Organic flowing movement */
-@keyframes natureShape1 {
+/* Slow, gentle gradient movement */
+@keyframes beyondPastelGradient {
 
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-    border-radius: 60% 40% 55% 45%;
+  0% {
+    background-position: 0% 50%;
   }
 
   50% {
-    transform: translate(100px, -35px) rotate(8deg) scale(1.12);
-    border-radius: 45% 55% 40% 60%;
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 
 }
 
 
-@keyframes natureShape2 {
-
-  0%, 100% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-    border-radius: 45% 55% 40% 60%;
-  }
-
-  50% {
-    transform: translate(-70px, 45px) rotate(-8deg) scale(1.10);
-    border-radius: 60% 40% 55% 45%;
-  }
-
-}
-
-
-/* Respect users who prefer reduced motion */
+/* Respect reduced-motion preferences */
 @media (prefers-reduced-motion: reduce) {
 
-  #beyond-academia::before,
-  #beyond-academia::after {
+  #beyond-academia {
     animation: none;
+    background: #d6efd5 !important;
   }
 
 }
