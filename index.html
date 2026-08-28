@@ -57,6 +57,39 @@ referrerpolicy="no-referrer"
 #beyond-academia { background-color: #fff9d9 !important; }
 #contact { background-color: #fdfdd4 !important; }
 
+  /* Slowly animate the existing Contact gradient */
+
+#contact {
+  background-size: 200% 200%;
+  animation: contactGradient 12s ease infinite;
+}
+
+@keyframes contactGradient {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+/* Accessibility: respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #contact {
+    animation: none;
+  }
+
+}
+  
 .about-mf .box-shadow-full {
 margin: 0 auto !important;
 width: 100% !important;
