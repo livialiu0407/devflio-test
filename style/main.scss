@@ -10,24 +10,4 @@
 @import "./sections/hero";
 @import "./sections/projects";
 
-/* Force overall section contents to center */
-#publications, #resume {
-  text-align: center !important;
-}
-
-#publications .container, #resume .container {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Force publication cards to remain centered */
-.publication-item {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-  float: none !important;
-}
+/* ========================================================= HERO — Floating Soft Bubbles ========================================================= */ #hero { position: relative; overflow: hidden; background-color: #fde8ed !important; } /* Make sure the actual Hero content stays above the bubbles */ #hero .container, #hero .scroll-down-link { position: relative; z-index: 2; } /* Bubble layer */ #hero::before, #hero::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; z-index: 1; } /* Large soft bubble */ #hero::before { width: 280px; height: 280px; top: 8%; left: -80px; background: rgba(255, 255, 255, 0.30); filter: blur(3px); animation: heroBubble1 18s ease-in-out infinite; } /* Smaller lavender/pink bubble */ #hero::after { width: 200px; height: 200px; right: -50px; bottom: 12%; background: rgba(220, 205, 245, 0.28); filter: blur(3px); animation: heroBubble2 15s ease-in-out infinite; } /* Bubble movement */ @keyframes heroBubble1 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(100px, -40px) scale(1.15); } } @keyframes heroBubble2 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-80px, 50px) scale(1.12); } } /* ========================================================= BEYOND ACADEMIA — Organic Nature Movement ========================================================= */ #beyond-academia { position: relative; overflow: hidden; background-color: #d6efd5 !important; } /* Keep all content above the organic shapes */ #beyond-academia .container { position: relative; z-index: 2; } /* Soft organic shapes */ #beyond-academia::before, #beyond-academia::after { content: ""; position: absolute; pointer-events: none; z-index: 1; opacity: 0.35; } /* Large flowing organic shape */ #beyond-academia::before { width: 420px; height: 260px; left: -150px; bottom: -80px; background: rgba(255, 255, 255, 0.35); border-radius: 60% 40% 55% 45%; filter: blur(2px); animation: natureFlow1 20s ease-in-out infinite; } /* Smaller organic shape */ #beyond-academia::after { width: 300px; height: 220px; right: -100px; top: -60px; background: rgba(180, 220, 175, 0.35); border-radius: 45% 55% 40% 60%; filter: blur(2px); animation: natureFlow2 17s ease-in-out infinite; } /* Organic movement */ @keyframes natureFlow1 { 0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); border-radius: 60% 40% 55% 45%; } 50% { transform: translate(100px, -30px) rotate(8deg) scale(1.12); border-radius: 45% 55% 40% 60%; } } @keyframes natureFlow2 { 0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); border-radius: 45% 55% 40% 60%; } 50% { transform: translate(-70px, 50px) rotate(-8deg) scale(1.1); border-radius: 60% 40% 55% 45%; } } /* ========================================================= Accessibility — Respect reduced-motion settings ========================================================= */ @media (prefers-reduced-motion: reduce) { #hero::before, #hero::after, #beyond-academia::before, #beyond-academia::after { animation: none; } }
