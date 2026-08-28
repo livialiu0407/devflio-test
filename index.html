@@ -81,6 +81,73 @@ Have fun creating your portfolio on this template!!! -->
         display: block !important;
         border-radius: 12px;
       }
+      /* =========================================================
+   HERO — Floating Soft Bubbles
+   ========================================================= */
+
+#hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Keep Hero content above the bubbles */
+#hero .container,
+#hero .scroll-down-link {
+  position: relative;
+  z-index: 2;
+}
+
+/* Large floating bubble */
+#hero::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  top: 5%;
+  left: -80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  filter: blur(4px);
+  pointer-events: none;
+  z-index: 1;
+  animation: heroBubble1 12s ease-in-out infinite;
+}
+
+/* Second floating bubble */
+#hero::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: -50px;
+  bottom: 10%;
+  border-radius: 50%;
+  background: rgba(220, 205, 245, 0.40);
+  filter: blur(4px);
+  pointer-events: none;
+  z-index: 1;
+  animation: heroBubble2 10s ease-in-out infinite;
+}
+
+@keyframes heroBubble1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(100px, -40px) scale(1.15);
+  }
+}
+
+@keyframes heroBubble2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-80px, 50px) scale(1.12);
+  }
+}
     </style>
   </head>
   <body>
