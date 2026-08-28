@@ -23,7 +23,7 @@ Have fun creating your portfolio on this template!!! -->
     <meta name="keywords" content="Xiaoran Liu, Livia Liu, NYU Silver, Social Work PhD, Mental Health AI, Computational Social Science" />
     <meta name="description" content="Xiaoran (Livia) Liu | Doctoral Student & Researcher at NYU Silver School of Social Work." />
 
-    <link rel="icon" type="image/png" href="assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" href="./assets/android-chrome-192x192.png">
     <meta name="theme-color" content="#ee9ca7" />
 
     <!-- Open Graph / Facebook -->
@@ -49,7 +49,8 @@ Have fun creating your portfolio on this template!!! -->
     <style>
       #hero { background-color: #fde8ed !important; }
       #about { background-color: #f1e1f7 !important; }
-      #projects, #publications { background-color: #d7e8f4 !important; }
+      #publications { background-color: #d7e8f4 !important; }
+      #resume { background-color: #fde8ed !important; }
       #beyond-academia { background-color: #d6efd5 !important; }
       #contact { background-color: #fdfdd4 !important; }
 
@@ -83,17 +84,21 @@ Have fun creating your portfolio on this template!!! -->
 
     <!-- Hero Section -->
     <section id="hero" class="jumbotron">
-      <div class="container">
+      <div class="container text-center">
         
-        <!-- Icon Badge -->
-        <div class="hero-icon mb-3" style="text-align: center;">
-          <img src="Icon pic with dogs.jpeg" alt="Icon" style="max-width: 100px; height: auto; border-radius: 50%;">
+        <!-- Welcome Icon Badge -->
+        <div class="hero-icon mb-4" style="display: flex; justify-content: center; align-items: center;">
+          <img 
+            src="./assets/Icon%20pic%20with%20dogs.jpeg" 
+            alt="Xiaoran Liu Icon" 
+            style="max-width: 130px; width: 100%; height: 130px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 3px solid #ffffff;"
+          />
         </div>
 
         <h1 class="hero-title">
           Hi, my name is <span class="text-color-main name">Xiaoran (Livia) Liu</span>
           <br />
-          
+          I'm a PhD Student & Researcher @ NYU Silver.
         </h1>
         <p class="hero-cta">
           <a class="cta-btn cta-btn--hero" href="#about">Get to know me</a>
@@ -129,7 +134,7 @@ Have fun creating your portfolio on this template!!! -->
           <div class="col-md-6 col-sm-12">
             <div class="about-wrapper__info">
               <p class="about-wrapper__info-text">
-                I am a PhD student @ the NYU Silver School of Social Work. My background bridges empirical research in affective neuroscience with direct clinical social work in inpatient psychiatric settings.
+                I am a PhD student at the NYU Silver School of Social Work. My background bridges empirical research in affective neuroscience with direct clinical social work in inpatient psychiatric settings.
               </p>
               <p class="about-wrapper__info-text">
                 My work focuses on leveraging human-centered technology and natural language processing (NLP) to promote mental health equity, understand cultural help-seeking behaviors, and inform ethically grounded social work practice.
@@ -148,28 +153,30 @@ Have fun creating your portfolio on this template!!! -->
     <!-- /END About Me Section -->
 
 
-    <!-- Projects Section -->
-    <section id="projects">
+    <!-- Publications Section -->
+    <section id="publications">
       <div class="container">
         <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
+          <h2 class="section-title dark-blue-text">Publications</h2>
 
-          <!-- Project 1 -->
+          <!-- Publication Entry 1 -->
           <article class="row">
             <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Project Title</h3>
+              <h3 class="project-wrapper__text-title">Publication Title</h3>
               <p class="project-wrapper__text-info">
-                Description of your research project, computational modeling, or natural language processing analysis goes here.
+                Authors: Xiaoran Liu, et al.<br />
+                <em>Journal / Conference Name (Year)</em><br /><br />
+                Abstract summary or brief overview of research findings regarding natural language processing, mental health models, or clinical evaluation.
               </p>
               <div class="project-wrapper__text-btns">
-                <a href="#" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">See Live</a>
-                <a href="#" target="_blank" class="cta-btn text-color-main">Source Code</a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--hero cta-btn--projects">Read Paper</a>
+                <a href="#" target="_blank" class="cta-btn text-color-main">DOI / Link</a>
               </div>
             </div>
             <div class="project-wrapper__image">
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <div class="thumbnail rounded">
-                  <img src="./assets/project.png" class="img-fluid" alt="Project Image" width="1366" height="767" />
+                  <img src="./assets/project.png" class="img-fluid" alt="Publication Graphic" width="1366" height="767" />
                 </div>
               </a>
             </div>
@@ -178,23 +185,45 @@ Have fun creating your portfolio on this template!!! -->
         </div>
       </div>
     </section>
-    <!-- End Projects Section -->
+    <!-- End Publications Section -->
 
 
-    <!-- Beyond Academia Section -->
+    <!-- Resume / CV Section -->
+    <section id="resume" style="padding: 60px 0;">
+      <div class="container">
+        <h2 class="section-title">Resume / CV</h2>
+        <div class="row text-center justify-content-center">
+          <div class="col-md-8">
+            <p class="lead" style="font-size: 1.15rem; line-height: 1.8; color: #333333; margin-bottom: 25px;">
+              My professional background spans clinical social work in inpatient psychiatric units, computational research in natural language processing (NLP), and affective neuroscience.
+            </p>
+            <div class="contact-wrapper">
+              <!-- Replace href link below with your uploaded CV PDF file name in assets folder -->
+              <a href="./assets/CV.pdf" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--resume">
+                Download Full CV (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Resume Section -->
+
+
+    <!-- Beyond Academia Section (Fully Centered) -->
     <section id="beyond-academia" style="padding: 60px 0;">
       <div class="container">
-        <h2 class="section-title">Beyond Academia</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-12 text-center">
-            <p class="lead" style="font-size: 1.15rem; line-height: 1.8; color: #333333; margin-bottom: 30px;">
+        <h2 class="section-title text-center">Beyond Academia</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-10 text-center">
+            <p class="lead" style="font-size: 1.15rem; line-height: 1.8; color: #333333; margin-bottom: 30px; text-align: center;">
               Outside of research and clinical work, I love spending time outdoors, whether hiking, camping, or kayaking with my two poodles, Phoebe and Powder. I am also passionate about wildlife rehabilitation and local bird rescue, caring for my three resident birds at home: Hope, Happy, and Blue.
             </p>
-            <div>
+            <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
               <img 
-                src="./assets/Photo w/Photo with dogs.jpeg" 
+                src="./assets/Photo%20w/Photo%20with%20dogs.jpeg" 
                 alt="Xiaoran (Livia) Liu with Phoebe and Powder" 
-                style="max-width: 100%; max-height: 440px; width: auto; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); object-fit: cover;" 
+                style="max-width: 100%; max-height: 460px; width: auto; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); object-fit: cover; display: block; margin: 0 auto;" 
               />
             </div>
           </div>
