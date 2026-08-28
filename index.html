@@ -55,8 +55,49 @@ referrerpolicy="no-referrer"
 #publications { background-color: #d7e8f4 !important; }
 #resume { background-color: #fde8ed !important; }
   
-#beyond-academia{ background-color: #ffffe8 !important; }
+/* =========================================================
+   BEYOND ACADEMIA — Slowly Animated Gradient
+   ========================================================= */
 
+#beyond-academia {
+  background: linear-gradient(
+    135deg,
+    #ffffe8 0%,
+    #f8f8dc 50%,
+    #ffffe8 100%
+  ) !important;
+
+  background-size: 200% 200%;
+  animation: beyondGradient 14s ease infinite;
+}
+
+@keyframes beyondGradient {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #beyond-academia {
+    animation: none;
+    background: #ffffe8 !important;
+  }
+
+}
+  
   
 #contact { background-color: #fdfdd4 !important; }
 
