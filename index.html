@@ -572,17 +572,113 @@ and Blue.
 
 
 
-<!-- Contact Section -->
+<!-- =========================================================
+     CONTACT / FINAL SECTION
+     ========================================================= -->
+
 <section id="contact">
-<div class="container">
-<h2 class="section-title">Contact</h2>
-<div class="contact-wrapper">
-<p class="contact-wrapper__text">Interested in collaborating on computational social science or digital mental health equity?</p>
-<a href="mailto:xl6461@nyu.edu" class="cta-btn cta-btn--resume">Email Me</a>
-</div>
-</div>
+
+  <div class="container" style="
+    text-align: center;
+  ">
+
+    <!-- Contact Heading -->
+    <h2 class="section-title" style="
+      text-align: center !important;
+    ">
+      Contact
+    </h2>
+
+
+    <!-- Contact Content -->
+    <div class="contact-wrapper" style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+    ">
+
+      <!-- Collaboration Message -->
+      <p class="contact-wrapper__text" style="
+        text-align: center !important;
+        margin: 0 auto 25px auto;
+      ">
+        Interested in collaborating on computational social science
+        or digital mental health equity?
+      </p>
+
+
+      <!-- Email Button -->
+      <a
+        href="mailto:xl6461@nyu.edu"
+        class="cta-btn cta-btn--resume"
+      >
+        Email Me
+      </a>
+
+
+      <!-- Academic & Professional Links -->
+      <div class="social-links" style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        margin-top: 35px;
+      ">
+
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/xiaoran-livia-liu-msw-6012a27a/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+
+        <!-- Google Scholar -->
+        <a
+          href="https://scholar.google.com/citations?hl=en&user=XgyRcIoAAAAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Scholar"
+        >
+          <i class="fa-solid fa-graduation-cap"></i>
+        </a>
+
+
+        <!-- PubMed -->
+        <a
+          href="https://www.ncbi.nlm.nih.gov/myncbi/livia.liu.2/bibliography/public/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="PubMed"
+        >
+          <i class="fa-solid fa-book-medical"></i>
+        </a>
+
+      </div>
+
+
+      <!-- Copyright -->
+      <p style="
+        margin: 30px auto 0 auto;
+        font-size: 0.9rem;
+        color: #555555;
+        text-align: center !important;
+      ">
+        &copy; <span id="year"></span> — Xiaoran (Livia) Liu
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
-<!-- END Contact Section -->
+<!-- /END Contact Section -->
 
 
 <!-- Footer Section -->
@@ -639,6 +735,7 @@ and Blue.
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+  
   <script>
 /* =========================================================
    Scroll Reveal Animation
