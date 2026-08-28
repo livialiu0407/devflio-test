@@ -10,574 +10,546 @@ Have fun creating your portfolio on this template!!! -->
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-    <!-- Title -->
-    <title> Livia Liu | PhD Student & Researcher</title>
+<!-- Title -->
+<title>Livia Liu | PhD Student & Researcher</title>
 
-    <meta name="keywords" content="Xiaoran Liu, Livia Liu, NYU Silver, Social Work PhD, Mental Health AI, Computational Social Science" />
-    <meta name="description" content="Livia Liu | Doctoral Student & Researcher at NYU Silver School of Social Work." />
+<meta name="keywords" content="Xiaoran Liu, Livia Liu, NYU Silver, Social Work PhD, Mental Health AI, Computational Social Science" />
+<meta name="description" content="Livia Liu | Doctoral Student & Researcher at NYU Silver School of Social Work." />
 
-    <!-- Browser Tab Icon (Favicon) -->
+<!-- Browser Tab Icon (Favicon) -->
 <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-chrome-192x192.png">
 <link rel="apple-touch-icon" sizes="192x192" href="./assets/android-chrome-192x192.png">
-    
-    <meta name="theme-color" content="#ee9ca7" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://devfolio.js.org/" />
-    <meta property="og:title" content="Xiaoran (Livia) Liu | PhD Student & Researcher" />
-    <meta property="og:description" content="Doctoral Student & Researcher at NYU Silver School of Social Work" />
-    <meta property="og:image" content="https://devfolio.js.org/assets/devfolio.png" />
+<meta name="theme-color" content="#ee9ca7" />
 
-    <!-- Link Tags -->
-    <link rel="preload" as="style" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://devfolio.js.org/" />
+<meta property="og:title" content="Xiaoran (Livia) Liu | PhD Student & Researcher" />
+<meta property="og:description" content="Doctoral Student & Researcher at NYU Silver School of Social Work" />
+<meta property="og:image" content="https://devfolio.js.org/assets/devfolio.png" />
 
-    <!-- FontAwesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<!-- Link Tags -->
+<link rel="preload" as="style" href="./css/main.css" />
+<link rel="stylesheet" href="./css/main.css" />
 
-    <!-- Custom Style Overrides -->
-    <style>
-      #hero { background-color: #fde8ed !important; }
-      #about { background-color: #f1e1f7 !important; }
-      #publications { background-color: #d7e8f4 !important; }
-      #resume { background-color: #fff9d9 !important; }
-      #beyond-academia { background-color: #d6efd5 !important; }
-      #contact { background-color: #fdfdd4 !important; }
+<!-- FontAwesome Icons -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+/>
 
-      .about-mf .box-shadow-full {
-        margin: 0 auto !important;
-        width: 100% !important;
-        background: #ffffff;
-        padding: 40px;
-        border-radius: 16px;
-      }
+<!-- Custom Style Overrides -->
+<style>
+#hero { background-color: #fde8ed !important; }
+#about { background-color: #f1e1f7 !important; }
+#publications { background-color: #d7e8f4 !important; }
+#resume { background-color: #d6efd5 !important; }
+#beyond-academia { background-color: #fff9d9 !important; }
+#contact { background-color: #fdfdd4 !important; }
 
-      .about-me .lead {
-        max-width: 100% !important;
-        width: 100% !important;
-        font-size: 1.1rem !important;
-        line-height: 1.6 !important;
-        color: #333333;
-      }
-
-      .about-img img {
-        max-width: 220px !important;
-        width: 100% !important;
-        height: auto !important;
-        margin: 0 auto 15px auto !important;
-        display: block !important;
-        border-radius: 12px;
-      }
-      /* =========================================================
-   HERO — Floating Soft Bubbles
-   ========================================================= */
-
-#hero {
-  position: relative;
-  overflow: hidden;
+.about-mf .box-shadow-full {
+margin: 0 auto !important;
+width: 100% !important;
+background: #ffffff;
+padding: 40px;
+border-radius: 16px;
 }
 
-/* Keep Hero content above the bubbles */
-#hero .container,
-#hero .scroll-down-link {
-  position: relative;
-  z-index: 2;
+.about-me .lead {
+max-width: 100% !important;
+width: 100% !important;
+font-size: 1.1rem !important;
+line-height: 1.6 !important;
+color: #333333;
 }
 
-/* Large floating bubble */
-#hero::before {
-  content: "";
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  top: 5%;
-  left: -80px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.45);
-  filter: blur(4px);
-  pointer-events: none;
-  z-index: 1;
-  animation: heroBubble1 12s ease-in-out infinite;
+.about-img img {
+max-width: 220px !important;
+width: 100% !important;
+height: auto !important;
+margin: 0 auto 15px auto !important;
+display: block !important;
+border-radius: 12px;
 }
-
-/* Second floating bubble */
-#hero::after {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  right: -50px;
-  bottom: 10%;
-  border-radius: 50%;
-  background: rgba(220, 205, 245, 0.40);
-  filter: blur(4px);
-  pointer-events: none;
-  z-index: 1;
-  animation: heroBubble2 10s ease-in-out infinite;
-}
-
-@keyframes heroBubble1 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  50% {
-    transform: translate(100px, -40px) scale(1.15);
-  }
-}
-
-@keyframes heroBubble2 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-
-  50% {
-    transform: translate(-80px, 50px) scale(1.12);
-  }
-}
-
-
-/* =========================================================
-   BEYOND ACADEMIA — Animated Pastel Gradient
+  /* =========================================================
+   BEYOND ACADEMIA — Soft Organic Nature Background
    ========================================================= */
 
 #beyond-academia {
   position: relative;
   overflow: hidden;
-
-  background: linear-gradient(
-    -45deg,
-    #d6efd5,
-    #e8f5df,
-    #dff3e8,
-    #eef8df
-  ) !important;
-
-  background-size: 400% 400%;
-
-  animation: beyondPastelGradient 18s ease infinite;
+  background-color: #fff9d9 !important;
 }
 
-
-/* Keep the content above the animated background */
+/* Keep the actual content above the background shapes */
 #beyond-academia .container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+}
+
+/* Large soft organic shape */
+#beyond-academia::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 280px;
+  left: -140px;
+  bottom: -100px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  border-radius: 60% 40% 55% 45%;
+  filter: blur(3px);
+
+  pointer-events: none;
+  z-index: 1;
+
+  animation: natureShape1 18s ease-in-out infinite;
+}
+
+/* Smaller soft organic shape */
+#beyond-academia::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 230px;
+  right: -100px;
+  top: -70px;
+
+  background: rgba(170, 215, 165, 0.30);
+
+  border-radius: 45% 55% 40% 60%;
+  filter: blur(3px);
+
+  pointer-events: none;
+  z-index: 1;
+
+  animation: natureShape2 15s ease-in-out infinite;
 }
 
 
-/* Slow, gentle gradient movement */
-@keyframes beyondPastelGradient {
+/* Organic flowing movement */
+@keyframes natureShape1 {
 
-  0% {
-    background-position: 0% 50%;
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    border-radius: 60% 40% 55% 45%;
   }
 
   50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
+    transform: translate(100px, -35px) rotate(8deg) scale(1.12);
+    border-radius: 45% 55% 40% 60%;
   }
 
 }
 
 
-/* Respect reduced-motion preferences */
+@keyframes natureShape2 {
+
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    border-radius: 45% 55% 40% 60%;
+  }
+
+  50% {
+    transform: translate(-70px, 45px) rotate(-8deg) scale(1.10);
+    border-radius: 60% 40% 55% 45%;
+  }
+
+}
+
+
+/* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
 
-  #beyond-academia {
+  #beyond-academia::before,
+  #beyond-academia::after {
     animation: none;
-    background: #d6efd5 !important;
   }
 
 }
-    </style>
-  </head>
-  <body>
-    
+</style>
+</head>
+<body>
+
 <!-- Hero / Welcome Section (Strict Centered) -->
-    <section id="hero" class="jumbotron">
-      <div class="container text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto; text-align: center !important;">
-        
-        <!-- Icon Picture (Centered) -->
-        <div class="hero-icon mb-4" style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 0 auto;">
-          <img 
-            src="./assets/Icon%20pic%20with%20dogs.jpeg" 
-            alt="Xiaoran Liu Icon" 
-            style="width: 220px; height: 220px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid #ffffff; display: block; margin: 0 auto;"
-          />
-        </div>
+<section id="hero" class="jumbotron">
+<div class="container text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto; text-align: center !important;">
 
-        <!-- Name (Centered) -->
-        <h1 class="hero-title mb-4" style="text-align: center !important; margin-left: auto !important; margin-right: auto !important; width: 100%; display: block;">
-          <span class="text-color-main name" style="display: inline-block; text-align: center;">Xiaoran (Livia) Liu</span>
-        </h1>
+<!-- Icon Picture (Centered) -->
+<div class="hero-icon mb-4" style="display: flex; justify-content: center; align-items: center; width: 100%; margin: 0 auto;">
+<img
+src="./assets/Icon%20pic%20with%20dogs.jpeg"
+alt="Xiaoran Liu Icon"
+style="width: 220px; height: 220px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 4px solid #ffffff; display: block; margin: 0 auto;"
+/>
+</div>
 
-        <!-- Get to Know Me Button (Centered) -->
-        <div class="hero-cta" style="text-align: center !important; margin: 0 auto !important; width: 100%; display: flex; justify-content: center;">
-          <a class="cta-btn cta-btn--hero" href="#about" style="margin: 0 auto;">Get to know me</a>
-        </div>
+<!-- Name (Centered) -->
+<h1 class="hero-title mb-4" style="text-align: center !important; margin-left: auto !important; margin-right: auto !important; width: 100%; display: block;">
+<span class="text-color-main name" style="display: inline-block; text-align: center;">Xiaoran (Livia) Liu</span>
+</h1>
 
-      </div>
-      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
-        <div class="scroll-down"></div>
-      </a>
-    </section>
-    <!-- /END Hero Section -->
+<!-- Get to Know Me Button (Centered) -->
+<div class="hero-cta" style="text-align: center !important; margin: 0 auto !important; width: 100%; display: flex; justify-content: center;">
+<a class="cta-btn cta-btn--hero" href="#about" style="margin: 0 auto;">Get to know me</a>
+</div>
 
-
-
-    <!-- About Me Section -->
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="row about-wrapper">
-          
-          <!-- Profile Picture -->
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image">
-              <img
-                class="img-fluid rounded shadow-lg"
-                height="auto"
-                width="300px"
-                src="./assets/att.MyBoZk40ZwI1MlLLWXt1rjefdOtGsXuYcGhXUdxvbHA.jpeg"
-                alt="Profile Picture"
-              />
-            </div>
-          </div>
-
-          <!-- Bio Details -->
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__info">
-              <p class="about-wrapper__info-text">
-                I am a PhD student at the NYU Silver School of Social Work. My background bridges empirical research in affective neuroscience with direct clinical social work in inpatient psychiatric settings.
-              </p>
-              <p class="about-wrapper__info-text">
-                My work focuses on leveraging human-centered technology and natural language processing (NLP) to promote mental health equity, understand cultural help-seeking behaviors, and inform ethically grounded social work practice.
-              </p>
-              <span class="d-flex mt-3">
-                <a target="_blank" class="cta-btn cta-btn--resume" href="#contact">
-                  Get in Touch
-                </a>
-              </span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- /END About Me Section -->
+</div>
+<a href="#about" class="scroll-down-link" aria-label="scroll-down">
+<div class="scroll-down"></div>
+</a>
+</section>
+<!-- /END Hero Section -->
 
 
-    <!-- Publications Section -->
+
+<!-- About Me Section -->
+<section id="about">
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<div class="row about-wrapper">
+
+<!-- Profile Picture -->
+<div class="col-md-6 col-sm-12">
+<div class="about-wrapper__image">
+<img
+class="img-fluid rounded shadow-lg"
+height="auto"
+width="300px"
+src="./assets/att.MyBoZk40ZwI1MlLLWXt1rjefdOtGsXuYcGhXUdxvbHA.jpeg"
+alt="Profile Picture"
+/>
+</div>
+</div>
+
+<!-- Bio Details -->
+<div class="col-md-6 col-sm-12">
+<div class="about-wrapper__info">
+<p class="about-wrapper__info-text">
+I am a PhD student at the NYU Silver School of Social Work. My background bridges empirical research in affective neuroscience with direct clinical social work in inpatient psychiatric settings.
+</p>
+<p class="about-wrapper__info-text">
+My work focuses on leveraging human-centered technology and natural language processing (NLP) to promote mental health equity, understand cultural help-seeking behaviors, and inform ethically grounded social work practice.
+</p>
+<span class="d-flex mt-3">
+<a target="_blank" class="cta-btn cta-btn--resume" href="#contact">
+Get in Touch
+</a>
+</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- /END About Me Section -->
+
+
+<!-- Publications Section -->
 <section id="publications" style="padding: 60px 0;">
-  <div class="container" style="text-align: center;">
+<div class="container" style="text-align: center;">
 
-    <div class="project-wrapper" style="max-width: 1000px; margin: 0 auto;">
+<div class="project-wrapper" style="max-width: 1000px; margin: 0 auto;">
 
-      <h2 class="section-title dark-blue-text" style="text-align: center !important;">
-        Publications & Working Papers
-      </h2>
+<h2 class="section-title dark-blue-text" style="text-align: center !important;">
+Publications & Working Papers
+</h2>
 
-      <!-- Legal Name / Citation Note -->
-      <p style="
-        font-size: 0.95rem;
-        font-style: italic;
-        color: #666666;
-        max-width: 600px;
-        margin: 0 auto 30px auto;
-        text-align: center !important;
-      ">
-        *Note: Publications are indexed under my formal name, Xiaoran Liu.
-      </p>
+<!-- Legal Name / Citation Note -->
+<p style="
+font-size: 0.95rem;
+font-style: italic;
+color: #666666;
+max-width: 600px;
+margin: 0 auto 30px auto;
+text-align: center !important;
+">
+*Note: Publications are indexed under my formal name, Xiaoran Liu.
+</p>
 
-      <!-- Peer-Reviewed Publications -->
-      <div style="
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: center;
-      ">
+<!-- Peer-Reviewed Publications -->
+<div style="
+width: 100%;
+max-width: 900px;
+margin: 0 auto;
+text-align: center;
+">
 
-        <h3 style="
-          font-size: 1.5rem;
-          color: #272341;
-          padding-bottom: 8px;
-          margin: 0 auto 25px auto;
-          text-align: center !important;
-        ">
-          Peer-Reviewed & Conference Proceedings
-        </h3>
+<h3 style="
+font-size: 1.5rem;
+color: #272341;
+padding-bottom: 8px;
+margin: 0 auto 25px auto;
+text-align: center !important;
+">
+Peer-Reviewed & Conference Proceedings
+</h3>
 
-        <!-- Publication 1 -->
-        <div class="publication-item" style="
-          background: #ffffff;
-          padding: 25px;
-          margin: 0 auto 25px auto;
-          border-radius: 12px;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-          width: 100%;
-          box-sizing: border-box;
-          text-align: center !important;
-        ">
-          <p style="
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #333333;
-            margin: 0;
-            text-align: center !important;
-          ">
-            Varadarajan, V., Mahwish, S., <strong>Liu, X.</strong>, Buffolino, J.,
-            Luhmann, C., Boyd, R., & Schwartz, H. A. (2025).
-            Capturing Human Cognitive Styles with Language: Towards an Experimental
-            Evaluation Paradigm.
-            <em>
-              Proceedings of the 2025 Conference of the North American Chapter
-              of the Association for Computational Linguistics (NAACL)
-            </em>.
-          </p>
-        </div>
+<!-- Publication 1 -->
+<div class="publication-item" style="
+background: #ffffff;
+padding: 25px;
+margin: 0 auto 25px auto;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+width: 100%;
+box-sizing: border-box;
+text-align: center !important;
+">
+<p style="
+font-size: 1.05rem;
+line-height: 1.7;
+color: #333333;
+margin: 0;
+text-align: center !important;
+">
+Varadarajan, V., Mahwish, S., <strong>Liu, X.</strong>, Buffolino, J.,
+Luhmann, C., Boyd, R., & Schwartz, H. A. (2025).
+Capturing Human Cognitive Styles with Language: Towards an Experimental
+Evaluation Paradigm.
+<em>
+Proceedings of the 2025 Conference of the North American Chapter
+of the Association for Computational Linguistics (NAACL)
+</em>.
+</p>
+</div>
 
-        <!-- Publication 2 -->
-        <div class="publication-item" style="
-          background: #ffffff;
-          padding: 25px;
-          margin: 0 auto 25px auto;
-          border-radius: 12px;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-          width: 100%;
-          box-sizing: border-box;
-          text-align: center !important;
-        ">
-          <p style="
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #333333;
-            margin: 0;
-            text-align: center !important;
-          ">
-            Varadarajan, V., Juhng, S., Mahwish, S., <strong>Liu, X.</strong>,
-            Luby, J., Luhmann, C., & Schwartz, H. A. (2023).
-            Transfer and Active Learning for Dissonance Detection:
-            Addressing the Rare-Class Challenge.
-            <em>arXiv preprint</em>.
-          </p>
-        </div>
+<!-- Publication 2 -->
+<div class="publication-item" style="
+background: #ffffff;
+padding: 25px;
+margin: 0 auto 25px auto;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+width: 100%;
+box-sizing: border-box;
+text-align: center !important;
+">
+<p style="
+font-size: 1.05rem;
+line-height: 1.7;
+color: #333333;
+margin: 0;
+text-align: center !important;
+">
+Varadarajan, V., Juhng, S., Mahwish, S., <strong>Liu, X.</strong>,
+Luby, J., Luhmann, C., & Schwartz, H. A. (2023).
+Transfer and Active Learning for Dissonance Detection:
+Addressing the Rare-Class Challenge.
+<em>arXiv preprint</em>.
+</p>
+</div>
 
-        <!-- Manuscripts in Submission -->
-        <h3 style="
-          font-size: 1.5rem;
-          color: #272341;
-          padding-bottom: 8px;
-          margin: 40px auto 25px auto;
-          text-align: center !important;
-        ">
-          Manuscripts in Submission & Working Papers
-        </h3>
+<!-- Manuscripts in Submission -->
+<h3 style="
+font-size: 1.5rem;
+color: #272341;
+padding-bottom: 8px;
+margin: 40px auto 25px auto;
+text-align: center !important;
+">
+Manuscripts in Submission & Working Papers
+</h3>
 
-        <!-- Submission 1 -->
-        <div class="publication-item" style="
-          background: #ffffff;
-          padding: 25px;
-          margin: 0 auto 25px auto;
-          border-radius: 12px;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-          width: 100%;
-          box-sizing: border-box;
-          text-align: center !important;
-        ">
-          <p style="
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #333333;
-            margin: 0;
-            text-align: center !important;
-          ">
-            <strong>Liu, X.</strong>, & An, R. (Submitted for 2027).
-            Understanding Asian American Help-Seeking Through NLP Towards
-            Culturally Responsive Suicide Prevention.
-            <em>
-              Abstract submitted to the Society for Social Work and Research
-              (SSWR) 31st Annual Conference
-            </em>.
-          </p>
-        </div>
+<!-- Submission 1 -->
+<div class="publication-item" style="
+background: #ffffff;
+padding: 25px;
+margin: 0 auto 25px auto;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+width: 100%;
+box-sizing: border-box;
+text-align: center !important;
+">
+<p style="
+font-size: 1.05rem;
+line-height: 1.7;
+color: #333333;
+margin: 0;
+text-align: center !important;
+">
+<strong>Liu, X.</strong>, & An, R. (Submitted for 2027).
+Understanding Asian American Help-Seeking Through NLP Towards
+Culturally Responsive Suicide Prevention.
+<em>
+Abstract submitted to the Society for Social Work and Research
+(SSWR) 31st Annual Conference
+</em>.
+</p>
+</div>
 
-      </div>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 <!-- /END Publications Section -->
 
 
 <! CV Section -->
 <section id="resume" style="padding: 60px 0;">
-  <div class="container" style="text-align: center;">
+<div class="container" style="text-align: center;">
 
-    <h2 class="section-title" style="text-align: center !important;">
-      CV
-    </h2>
+<h2 class="section-title" style="text-align: center !important;">
+CV
+</h2>
 
-    <div style="
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    ">
+<div style="
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+text-align: center;
+">
 
-      <p class="lead" style="
-        font-size: 1.15rem;
-        line-height: 1.8;
-        color: #333333;
-        margin: 0 auto 25px auto;
-        text-align: center !important;
-      ">
-        My professional background spans clinical social work in inpatient
-        psychiatric units, computational research in natural language
-        processing (NLP), and affective neuroscience.
-      </p>
+<p class="lead" style="
+font-size: 1.15rem;
+line-height: 1.8;
+color: #333333;
+margin: 0 auto 25px auto;
+text-align: center !important;
+">
+My professional background spans clinical social work in inpatient
+psychiatric units, computational research in natural language
+processing (NLP), and affective neuroscience.
+</p>
 
-      <div style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-      ">
-        <a
-          href="assets/Livia Resume 8-26.pdf"
-          target="_blank"
-          class="cta-btn cta-btn--resume"
-        >
-          View Full CV
-        </a>
-      </div>
+<div style="
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+">
+<a
+href="assets/Livia Resume 8-26.pdf"
+target="_blank"
+class="cta-btn cta-btn--resume"
+>
+View Full CV
+</a>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 <!-- /END CV Section -->
 
 
-    <!-- Beyond Academia Section -->
+<!-- Beyond Academia Section -->
 <section id="beyond-academia" style="padding: 60px 0; text-align: center !important;">
 
-  <div class="container" style="text-align: center !important;">
+<div class="container" style="text-align: center !important;">
 
-    <h2 class="section-title" style="text-align: center !important;">
-      Beyond Academia
-    </h2>
+<h2 class="section-title" style="text-align: center !important;">
+Beyond Academia
+</h2>
 
-    <div style="
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center !important;
-    ">
+<div style="
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+text-align: center !important;
+">
 
-      <!-- Photo -->
-      <div style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 0 auto 30px auto;
-      ">
-        <img
-          src="./assets/Photo%20w/Photo%20with%20dogs.jpeg"
-          alt="Xiaoran Liu with dogs"
-          style="
-            width: 450px;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-          "
-        />
-      </div>
+<!-- Photo -->
+<div style="
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+margin: 0 auto 30px auto;
+">
+<img
+src="./assets/Photo%20w/Photo%20with%20dogs.jpeg"
+alt="Xiaoran Liu with dogs"
+style="
+width: 450px;
+max-width: 100%;
+height: auto;
+display: block;
+margin: 0 auto;
+border-radius: 12px;
+box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+"
+/>
+</div>
 
-      <!-- Bio Text -->
-      <p style="
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: #333333;
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center !important;
-      ">
-        Outside of research and clinical work, I love spending time outdoors,
-        whether skiing, kayaking, camping, or hiking with my two poodles, Phoebe and
-        Powder. I am also passionate about wildlife rehabilitation and local
-        bird rescue, caring for my three resident birds at home: Hope, Happy,
-        and Blue.
-      </p>
+<!-- Bio Text -->
+<p style="
+font-size: 1.1rem;
+line-height: 1.8;
+color: #333333;
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+text-align: center !important;
+">
+Outside of research and clinical work, I love spending time outdoors,
+whether skiing, kayaking, camping, or hiking with my two poodles, Phoebe and
+Powder. I am also passionate about wildlife rehabilitation and local
+bird rescue, caring for my three resident birds at home: Hope, Happy,
+and Blue.
+</p>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 <!-- /END Beyond Academia Section -->
-    
-    
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper">
-          <p class="contact-wrapper__text">Interested in collaborating on computational social science or digital mental health equity?</p>
-          <a href="mailto:your.email@nyu.edu" class="cta-btn cta-btn--resume">Email Me</a>
-        </div>
-      </div>
-    </section>
-    <!-- END Contact Section -->
 
 
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-        <a href="#hero" class="back-to-top" aria-label="go back to top">
-          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </a>
-        <div class="social-links">
-          <a href="#!" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="#!" target="_blank" rel="noopener noreferrer" aria-label="github">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-        <hr />
-        <p class="footer__text">
-          &copy; <span id="year"></span> - Xiaoran (Livia) Liu
-        </p>
-      </div>
-    </footer>
-    <!-- END Footer Section -->
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-    <script src="./javascript/vanilla-tilt.min.js"></script>
-    <script type="text/javascript" src="./javascript/valtilt.js"></script>
-  </body>
+<!-- Contact Section -->
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact</h2>
+<div class="contact-wrapper">
+<p class="contact-wrapper__text">Interested in collaborating on computational social science or digital mental health equity?</p>
+<a href="mailto:your.email@nyu.edu" class="cta-btn cta-btn--resume">Email Me</a>
+</div>
+</div>
+</section>
+<!-- END Contact Section -->
+
+
+<!-- Footer Section -->
+<footer class="footer">
+<div class="container">
+<a href="#hero" class="back-to-top" aria-label="go back to top">
+<i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+</a>
+<div class="social-links">
+<a href="#!" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+<i class="fa-brands fa-linkedin"></i>
+</a>
+<a href="#!" target="_blank" rel="noopener noreferrer" aria-label="github">
+<i class="fa-brands fa-github"></i>
+</a>
+</div>
+<hr />
+<p class="footer__text">
+&copy; <span id="year"></span> - Xiaoran (Livia) Liu
+</p>
+</div>
+</footer>
+<!-- END Footer Section -->
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="./javascript/vanilla-tilt.min.js"></script>
+<script type="text/javascript" src="./javascript/valtilt.js"></script>
+</body>
 </html>
