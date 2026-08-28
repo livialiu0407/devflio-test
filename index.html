@@ -50,29 +50,75 @@ referrerpolicy="no-referrer"
 
 <!-- Custom Style Overrides -->
 <style>
-#hero { background-color: #fde8ed !important; }
+
+  /* =========================================================
+   HERO — Slowly Animated Pink Gradient
+   ========================================================= */
+
+#hero {
+  background: linear-gradient(
+    135deg,
+    #fde8ed 0%,
+    #f8dce5 35%,
+    #fce5ec 65%,
+    #fde8ed 100%
+  ) !important;
+
+  background-size: 300% 300%;
+  animation: heroGradient 12s ease infinite;
+}
+
+@keyframes heroGradient {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #hero {
+    animation: none;
+    background: #fde8ed !important;
+  }
+
+}
+
+  
 #about { background-color: #f1e1f7 !important; }
 #publications { background-color: #d7e8f4 !important; }
 #resume { background-color: #fde8ed !important; }
   
 /* =========================================================
-   BEYOND ACADEMIA — Visible Soft Gradient
+   BEYOND ACADEMIA — Soft Sand & Neutral Gradient
    ========================================================= */
 
 #beyond-academia {
   background: linear-gradient(
     135deg,
     #ffffe8 0%,
-    #f4f1d5 35%,
-    #e7efd9 65%,
+    #eee9df 30%,
+    #e3d5c2 55%,
+    #eee9df 75%,
     #ffffe8 100%
   ) !important;
 
   background-size: 300% 300%;
-  animation: beyondGradient 10s ease infinite;
+  animation: beyondEarth 12s ease infinite;
 }
 
-@keyframes beyondGradient {
+@keyframes beyondEarth {
 
   0% {
     background-position: 0% 50%;
