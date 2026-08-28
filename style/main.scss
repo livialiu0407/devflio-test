@@ -9,3 +9,25 @@
 @import "./sections/contact";
 @import "./sections/hero";
 @import "./sections/projects";
+
+/* Force overall section contents to center */
+#publications, #resume {
+  text-align: center !important;
+}
+
+#publications .container, #resume .container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Force publication cards to remain centered */
+.publication-item {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  float: none !important;
+}
