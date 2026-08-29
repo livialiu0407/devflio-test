@@ -568,6 +568,45 @@ border-radius: 12px;
 
 }
 
+/* =========================================================
+   FIX HERO LINKS + SCROLL ARROW CLICKING
+   ========================================================= */
+
+.hero-modern {
+  position: relative !important;
+}
+
+/* Keep the actual navigation clickable */
+.hero-nav {
+  position: absolute;
+  z-index: 100 !important;
+  pointer-events: none;
+}
+
+.hero-nav a {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 101 !important;
+}
+
+/* Keep the center content clickable */
+.hero-center {
+  position: relative;
+  z-index: 50 !important;
+}
+
+.hero-center a {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 51 !important;
+}
+
+/* Keep the scroll arrow clickable */
+.scroll-down-link {
+  position: absolute;
+  z-index: 100 !important;
+  pointer-events: auto !important;
+}
 
 </style>
 </head>
