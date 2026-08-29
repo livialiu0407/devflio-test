@@ -4,34 +4,33 @@
     $primary-color 0%,
     $secondary-color 100%
   );
-  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-  padding: 15rem 0 10rem 0;
-  margin-top: -15rem;
-  margin-bottom: -1px;
+
+  /* Remove the original DevFolio angled/overlapping effect */
+  -webkit-clip-path: none;
+  clip-path: none;
+
+  /* Normal section spacing */
+  padding: 6rem 0 5rem 0;
+
+  /* IMPORTANT: prevents Contact from pulling over Beyond Academia */
+  margin-top: 0;
+  margin-bottom: 0;
+
   color: $white-color;
 
-  @include respond(tab-land) {
-    padding: 10rem 0;
-    margin-top: 0;
-    -webkit-clip-path: none;
-    clip-path: none;
-  }
-
   .contact-wrapper {
-    margin-top: 3.2rem;
+    margin-top: 2rem;
     padding: 0 2rem;
     backface-visibility: hidden;
 
     &__text {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     &__text,
     a {
       font-size: 2.4rem;
 
-      // Responsive for contact text
       @include respond(phone) {
         font-size: 2rem;
       }
