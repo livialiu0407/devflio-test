@@ -616,11 +616,10 @@ border-radius: 12px;
 
   <!-- LEFT BUBBLES -->
   <div class="hero-nav hero-nav-left">
-
     <a
       href="#publications"
       class="hero-float-link hero-publications"
-      onclick="scrollToSection('publications'); return false;"
+      onclick="scrollToSection(event, 'publications')"
     >
       Publications &amp; Working Papers
     </a>
@@ -628,21 +627,19 @@ border-radius: 12px;
     <a
       href="#beyond-academia"
       class="hero-float-link hero-beyond"
-      onclick="scrollToSection('beyond-academia'); return false;"
+      onclick="scrollToSection(event, 'beyond-academia')"
     >
       Beyond Academia
     </a>
-
   </div>
 
 
   <!-- RIGHT BUBBLES -->
   <div class="hero-nav hero-nav-right">
-
     <a
       href="#resume"
       class="hero-float-link hero-cv"
-      onclick="scrollToSection('resume'); return false;"
+      onclick="scrollToSection(event, 'resume')"
     >
       CV
     </a>
@@ -650,11 +647,10 @@ border-radius: 12px;
     <a
       href="#contact"
       class="hero-float-link hero-contact"
-      onclick="scrollToSection('contact'); return false;"
+      onclick="scrollToSection(event, 'contact')"
     >
       Contact
     </a>
-
   </div>
 
 
@@ -663,37 +659,29 @@ border-radius: 12px;
 
     <!-- Profile Picture -->
     <div class="hero-icon mb-4">
-
       <img
         src="./assets/Icon%20pic%20with%20dogs.jpeg"
         alt="Xiaoran Liu with her dogs"
         class="hero-profile-image"
       />
-
     </div>
-
 
     <!-- Name -->
     <h1 class="hero-title mb-4">
-
       <span class="text-color-main name">
         Xiaoran (Livia) Liu
       </span>
-
     </h1>
 
-
-    <!-- Get To Know Me -->
+    <!-- Get To Know Me Button -->
     <div class="hero-cta">
-
       <a
         href="#about"
         class="cta-btn cta-btn--hero"
-        onclick="scrollToSection('about'); return false;"
+        onclick="scrollToSection(event, 'about')"
       >
         Get to know me
       </a>
-
     </div>
 
   </div>
@@ -704,14 +692,35 @@ border-radius: 12px;
     href="#about"
     class="scroll-down-link"
     aria-label="Scroll to About Me"
-    onclick="scrollToSection('about'); return false;"
+    onclick="scrollToSection(event, 'about')"
   >
     <div class="scroll-down"></div>
   </a>
 
 </section>
-
 <!-- /END HERO SECTION -->
+
+
+<!-- =========================================================
+     SMOOTH SCROLL SCRIPT
+     ========================================================= -->
+<script>
+function scrollToSection(event, sectionId) {
+  const targetElement = document.getElementById(sectionId);
+  
+  if (targetElement) {
+    // Prevent default jump and apply smooth scroll
+    event.preventDefault();
+    targetElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  } else {
+    console.warn('Target section not found for ID:', sectionId);
+    // Allows default anchor jump (#sectionId) if smooth scrolling fails
+  }
+}
+</script>
 
 <!-- About Me Section -->
 <section id="about">
