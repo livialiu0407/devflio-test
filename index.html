@@ -614,13 +614,13 @@ border-radius: 12px;
 
 <section id="hero" class="jumbotron hero-modern">
 
-  <!-- LEFT FLOATING NAVIGATION -->
+  <!-- LEFT BUBBLES -->
   <div class="hero-nav hero-nav-left">
 
     <a
       href="#publications"
       class="hero-float-link hero-publications"
-      aria-label="Go to Publications and Working Papers"
+      onclick="scrollToSection('publications'); return false;"
     >
       Publications &amp; Working Papers
     </a>
@@ -628,7 +628,7 @@ border-radius: 12px;
     <a
       href="#beyond-academia"
       class="hero-float-link hero-beyond"
-      aria-label="Go to Beyond Academia"
+      onclick="scrollToSection('beyond-academia'); return false;"
     >
       Beyond Academia
     </a>
@@ -636,13 +636,13 @@ border-radius: 12px;
   </div>
 
 
-  <!-- RIGHT FLOATING NAVIGATION -->
+  <!-- RIGHT BUBBLES -->
   <div class="hero-nav hero-nav-right">
 
     <a
       href="#resume"
       class="hero-float-link hero-cv"
-      aria-label="Go to CV"
+      onclick="scrollToSection('resume'); return false;"
     >
       CV
     </a>
@@ -650,7 +650,7 @@ border-radius: 12px;
     <a
       href="#contact"
       class="hero-float-link hero-contact"
-      aria-label="Go to Contact"
+      onclick="scrollToSection('contact'); return false;"
     >
       Contact
     </a>
@@ -689,6 +689,7 @@ border-radius: 12px;
       <a
         href="#about"
         class="cta-btn cta-btn--hero"
+        onclick="scrollToSection('about'); return false;"
       >
         Get to know me
       </a>
@@ -703,6 +704,7 @@ border-radius: 12px;
     href="#about"
     class="scroll-down-link"
     aria-label="Scroll to About Me"
+    onclick="scrollToSection('about'); return false;"
   >
     <div class="scroll-down"></div>
   </a>
@@ -1203,5 +1205,23 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 <script src="./javascript/vanilla-tilt.min.js"></script>
 <script type="text/javascript" src="./javascript/valtilt.js"></script>
+   <script>
+function scrollToSection(sectionId) {
+
+  const section = document.getElementById(sectionId);
+
+  if (!section) {
+    console.log("Section not found:", sectionId);
+    return;
+  }
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+}
+</script>
+
 </body>
 </html>
