@@ -49,6 +49,33 @@ referrerpolicy="no-referrer"
 />
 
 <!-- Custom Style Overrides -->
+
+   /* Fix invisible click blocking across the Hero section */
+#hero, .hero-modern {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Ensure center layout doesn't trap clicks across the full screen width */
+.hero-center {
+  pointer-events: none !important;
+}
+
+/* Force all clickable elements to register mouse clicks on top */
+.hero-center .hero-cta,
+.hero-center .hero-cta a,
+.hero-nav,
+.hero-float-link,
+.scroll-down-link {
+  pointer-events: auto !important;
+  z-index: 9999 !important;
+  position: relative;
+}
+
+.hero-nav-left, .hero-nav-right {
+  position: absolute !important;
+  z-index: 9999 !important;
+}
 <style>
 
 /* =========================================================
