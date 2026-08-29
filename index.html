@@ -95,15 +95,13 @@ referrerpolicy="no-referrer"
   }
 
 }
-  
 
-  
 #about { background-color: #f1e1f7 !important; }
 #publications { background-color: #d7e8f4 !important; }
 #resume { background-color: #fde8ed !important; }
   
 /* =========================================================
-   BEYOND ACADEMIA — Soft Sand & Neutral Gradient
+   BEYOND ACADEMIA
    ========================================================= */
 
 #beyond-academia {
@@ -118,10 +116,17 @@ referrerpolicy="no-referrer"
 
   background-size: 300% 300%;
   animation: beyondEarth 12s ease infinite;
+
+  /* Extra breathing room before Contact */
+  padding-bottom: 120px !important;
+
+  /* Keep this section in normal document flow */
+  position: relative !important;
+  height: auto !important;
+  min-height: 0 !important;
 }
 
 @keyframes beyondEarth {
-
   0% {
     background-position: 0% 50%;
   }
@@ -133,10 +138,57 @@ referrerpolicy="no-referrer"
   100% {
     background-position: 0% 50%;
   }
-
 }
 
-/* Accessibility */
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+#contact {
+  /* Keep your existing Contact gradient */
+  position: relative !important;
+
+  /* Make sure Contact stays BELOW Beyond Academia */
+  margin-top: 0 !important;
+
+  /* Normal document flow */
+  height: auto !important;
+  min-height: 0 !important;
+
+  /* Give Contact reasonable spacing */
+  padding-top: 6rem !important;
+  padding-bottom: 5rem !important;
+
+  z-index: 2 !important;
+}
+
+
+/* Contact gradient animation */
+
+#contact {
+  background-size: 200% 200%;
+  animation: contactGradient 12s ease infinite;
+}
+
+@keyframes contactGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -145,44 +197,11 @@ referrerpolicy="no-referrer"
     background: #ffffe8 !important;
   }
 
-}
-  
-  
-#contact { background-color: #fdfdd4 !important; }
-
-  /* Slowly animate the existing Contact gradient */
-
-#contact {
-  background-size: 200% 200%;
-  animation: contactGradient 12s ease infinite;
-}
-
-@keyframes contactGradient {
-
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-
-}
-
-/* Accessibility: respect reduced-motion settings */
-
-@media (prefers-reduced-motion: reduce) {
-
   #contact {
     animation: none;
   }
 
-}
-  
+}  
 .about-mf .box-shadow-full {
 margin: 0 auto !important;
 width: 100% !important;
