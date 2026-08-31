@@ -332,43 +332,24 @@ html {
   pointer-events: auto !important;
 }
 
-/* DevFolio Oval Scroll Down Button with Animated Blue Dot */
+
+  /* ---------------------------------------------------------
+  Scroll Arrow
+  --------------------------------------------------------- */
+
 .scroll-down-link {
-  position: absolute !important;
-  left: 50%;
-  bottom: 25px;
-  transform: translateX(-50%);
-  z-index: 10000 !important;
-  display: block;
-  cursor: pointer !important;
-  pointer-events: auto !important;
-}
+ position: absolute !important;
 
-.scroll-down {
-  width: 30px;
-  height: 50px;
-  border: 2px solid #272341;
-  border-radius: 25px;
-  position: relative;
-  margin: 0 auto;
-}
+ left: 50%;
+ bottom: 25px;
 
-.scroll-down::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  width: 6px;
-  height: 6px;
-  margin-left: -3px;
-  background-color: #007bff;
-  border-radius: 50%;
-  animation: scrollDot 2s infinite;
-}
+ transform: translateX(-50%);
 
-@keyframes scrollDot {
-  0% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(20px); }
+ z-index: 35 !important;
+
+ pointer-events: auto !important;
+
+ cursor: pointer;
 }
 
 /* MOBILE RESPONSIVENESS */
