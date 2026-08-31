@@ -203,15 +203,16 @@ html {
 
 <style>
 /* =========================================================
-   HERO — CENTER CONTENT & FLOATING NAV
+   HERO — CENTER CONTENT & FLOATING NAV (OVERRIDE MAINCSS)
    ========================================================= */
 
 .hero-modern {
   position: relative !important;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 1 !important;
+  overflow: visible !important;
 }
 
+/* Allow clicks to pass through full-width center container */
 .hero-center {
   position: relative !important;
   z-index: 10 !important;
@@ -219,6 +220,15 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  pointer-events: none !important;
+}
+
+/* Re-enable clicks for elements inside center block */
+.hero-center *, 
+.hero-profile-image, 
+.hero-title, 
+.hero-cta {
+  pointer-events: auto !important;
 }
 
 .hero-profile-image {
@@ -237,7 +247,7 @@ html {
   position: absolute !important;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 20 !important;
+  z-index: 9999 !important;
   display: flex;
   flex-direction: column;
   gap: 55px;
@@ -245,40 +255,40 @@ html {
 }
 
 .hero-nav-left {
-  left: 7%;
+  left: 5%;
   align-items: flex-start;
 }
 
 .hero-nav-right {
-  right: 7%;
+  right: 5%;
   align-items: flex-end;
 }
 
 /* FLOATING BUTTONS */
 .hero-float-link {
-  display: inline-block;
+  display: inline-block !important;
   position: relative !important;
-  z-index: 21 !important;
+  z-index: 10000 !important;
   padding: 12px 20px;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85) !important;
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 30px;
   color: #272341 !important;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none !important;
-  box-shadow: 0 6px 20px rgba(80, 70, 100, 0.12);
+  box-shadow: 0 6px 20px rgba(80, 70, 100, 0.15);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   cursor: pointer !important;
   pointer-events: auto !important;
-  transition: box-shadow 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .hero-float-link:hover {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 10px 25px rgba(80, 70, 100, 0.2);
-  color: #272341 !important;
+  background: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 10px 25px rgba(80, 70, 100, 0.25);
+  color: #007bff !important;
   text-decoration: none !important;
 }
 
@@ -311,12 +321,13 @@ html {
 /* GET TO KNOW ME BUTTON */
 .hero-center .hero-cta {
   position: relative !important;
-  z-index: 15 !important;
+  z-index: 10000 !important;
+  pointer-events: auto !important;
 }
 
 .hero-center .hero-cta a {
   position: relative !important;
-  z-index: 16 !important;
+  z-index: 10001 !important;
   cursor: pointer !important;
   pointer-events: auto !important;
 }
@@ -327,7 +338,7 @@ html {
   left: 50%;
   bottom: 25px;
   transform: translateX(-50%);
-  z-index: 30 !important;
+  z-index: 10000 !important;
   display: block;
   cursor: pointer !important;
   pointer-events: auto !important;
@@ -356,14 +367,8 @@ html {
 }
 
 @keyframes scrollDot {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
 }
 
 /* MOBILE RESPONSIVENESS */
@@ -821,22 +826,22 @@ and Blue.
 
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
-
-/* Smooth Internal Navigation Script */
 document.addEventListener("DOMContentLoaded", function () {
-  const internalLinks = document.querySelectorAll('a[href^="#"]');
-
-  internalLinks.forEach(function (link) {
-    link.addEventListener("click", function (e) {
+  // Direct Click & Smooth Scroll Handler
+  const allInternalLinks = document.querySelectorAll("a[href^='#']");
+  
+  allInternalLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
       const targetId = this.getAttribute("href");
       
       if (targetId && targetId !== "#") {
-        const targetSection = document.querySelector(targetId);
+        const targetElement = document.querySelector(targetId);
         
-        if (targetSection) {
-          e.preventDefault();
-          targetSection.scrollIntoView({
+        if (targetElement) {
+          event.preventDefault();
+          event.stopPropagation();
+          
+          targetElement.scrollIntoView({
             behavior: "smooth",
             block: "start"
           });
@@ -845,7 +850,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* Scroll Reveal Animation */
+  // Footer Year
+  const yearElem = document.getElementById("year");
+  if (yearElem) {
+    yearElem.textContent = new Date().getFullYear();
+  }
+
+  // Scroll Reveal Observer
   const revealElements = document.querySelectorAll(
     "#about .section-title, " +
     "#about .about-wrapper, " +
