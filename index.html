@@ -866,16 +866,19 @@ border-radius: 12px;
 </style>
 
 
+
+```html
 <!-- =========================================================
      HERO / WELCOME SECTION
      ========================================================= -->
 
 <section id="hero" class="jumbotron hero-modern">
 
+  <!-- =======================================================
+       LEFT FLOATING LINKS
+       ======================================================= -->
 
-  <!-- LEFT BUBBLES -->
-
-  <div class="hero-nav hero-nav-left">
+  <nav class="hero-nav hero-nav-left" aria-label="Main navigation">
 
     <a
       href="#publications"
@@ -891,38 +894,16 @@ border-radius: 12px;
       Beyond Academia
     </a>
 
-  </div>
-
-
-  <!-- RIGHT BUBBLES -->
-
-  <div class="hero-nav hero-nav-right">
-
-    <a
-      href="#resume"
-      class="hero-float-link hero-cv"
-    >
-      CV
-    </a>
-
-    <a
-      href="#contact"
-      class="hero-float-link hero-contact"
-    >
-      Contact
-    </a>
-
-  </div>
+  </nav>
 
 
   <!-- =======================================================
-       CENTER
+       CENTER CONTENT
        ======================================================= -->
 
   <div class="container text-center hero-center">
 
-
-    <!-- PHOTO -->
+    <!-- Profile Picture -->
 
     <div class="hero-icon mb-4">
 
@@ -935,7 +916,7 @@ border-radius: 12px;
     </div>
 
 
-    <!-- NAME -->
+    <!-- Name -->
 
     <h1 class="hero-title mb-4">
 
@@ -946,7 +927,7 @@ border-radius: 12px;
     </h1>
 
 
-    <!-- GET TO KNOW ME -->
+    <!-- Get To Know Me -->
 
     <div class="hero-cta">
 
@@ -963,6 +944,29 @@ border-radius: 12px;
 
 
   <!-- =======================================================
+       RIGHT FLOATING LINKS
+       ======================================================= -->
+
+  <nav class="hero-nav hero-nav-right" aria-label="Secondary navigation">
+
+    <a
+      href="#resume"
+      class="hero-float-link hero-cv"
+    >
+      CV
+    </a>
+
+    <a
+      href="#contact"
+      class="hero-float-link hero-contact"
+    >
+      Contact
+    </a>
+
+  </nav>
+
+
+  <!-- =======================================================
        DOWN ARROW
        ======================================================= -->
 
@@ -971,19 +975,15 @@ border-radius: 12px;
     class="scroll-down-link"
     aria-label="Scroll to About Me"
   >
-
     <div class="scroll-down"></div>
-
   </a>
-
 
 </section>
 
-
 <!-- =========================================================
-     END HERO
+     END HERO SECTION
      ========================================================= -->
-
+```
 
 
 <!-- About Me Section -->
