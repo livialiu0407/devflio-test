@@ -42,11 +42,12 @@ Have fun creating your portfolio on this template!!! -->
 
 <!-- FontAwesome Icons -->
 <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
 />
+
 
 <style>
 
@@ -55,7 +56,7 @@ Have fun creating your portfolio on this template!!! -->
    ========================================================= */
 
 #hero {
-  background: linear-gradient(
+   background: linear-gradient(
     135deg,
     #fde8ed 0%,
     #fbe3ed 25%,
@@ -69,15 +70,36 @@ Have fun creating your portfolio on this template!!! -->
 }
 
 @keyframes heroGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #hero {
+    animation: none;
+    background: #fde8ed !important;
+  }
+
 }
 
 #about { background-color: #f1e1f7 !important; }
 #publications { background-color: #d7e8f4 !important; }
 #resume { background-color: #fde8ed !important; }
-
+  
 /* =========================================================
    BEYOND ACADEMIA
    ========================================================= */
@@ -94,66 +116,165 @@ Have fun creating your portfolio on this template!!! -->
 
   background-size: 300% 300%;
   animation: beyondEarth 12s ease infinite;
+
+  /* Extra breathing room before Contact */
   padding-bottom: 120px !important;
+
+  /* Keep this section in normal document flow */
   position: relative !important;
   height: auto !important;
   min-height: 0 !important;
 }
 
 @keyframes beyondEarth {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+
 
 /* =========================================================
    CONTACT
    ========================================================= */
 
 #contact {
+  /* Keep your existing Contact gradient */
   position: relative !important;
+
+  /* Make sure Contact stays BELOW Beyond Academia */
   margin-top: 0 !important;
+
+  /* Normal document flow */
   height: auto !important;
   min-height: 0 !important;
+
+  /* Give Contact reasonable spacing */
   padding-top: 6rem !important;
   padding-bottom: 5rem !important;
+
   z-index: 2 !important;
+}
+
+
+/* Contact gradient animation */
+
+#contact {
   background-size: 200% 200%;
   animation: contactGradient 12s ease infinite;
 }
 
 @keyframes contactGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #beyond-academia {
+    animation: none;
+    background: #ffffe8 !important;
+  }
+
+  #contact {
+    animation: none;
+  }
+
+}  
 .about-mf .box-shadow-full {
-  margin: 0 auto !important;
-  width: 100% !important;
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 16px;
+margin: 0 auto !important;
+width: 100% !important;
+background: #ffffff;
+padding: 40px;
+border-radius: 16px;
 }
 
 .about-me .lead {
-  max-width: 100% !important;
-  width: 100% !important;
-  font-size: 1.1rem !important;
-  line-height: 1.6 !important;
-  color: #333333;
+max-width: 100% !important;
+width: 100% !important;
+font-size: 1.1rem !important;
+line-height: 1.6 !important;
+color: #333333;
 }
 
 .about-img img {
-  max-width: 220px !important;
-  width: 100% !important;
-  height: auto !important;
-  margin: 0 auto 15px auto !important;
-  display: block !important;
-  border-radius: 12px;
+max-width: 220px !important;
+width: 100% !important;
+height: auto !important;
+margin: 0 auto 15px auto !important;
+display: block !important;
+border-radius: 12px;
 }
 
-/* =========================================================
+  /* =========================================================
+   SCROLL REVEAL — Gentle Section Animation
+   ========================================================= */
+
+/* Elements start slightly lower and transparent */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+/* When element enters the screen */
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Slightly staggered appearance */
+.scroll-reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.scroll-reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.scroll-reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  #beyond-academia {
+  padding-bottom: 120px !important;
+}   
+}
+ /* =========================================================
    MODERN HERO — FLOATING SECTION LINKS
    ========================================================= */
 
@@ -161,20 +282,25 @@ Have fun creating your portfolio on this template!!! -->
   position: relative !important;
   overflow: hidden;
   isolation: isolate;
-  z-index: 1;
 }
 
-/* Center Content */
+/* ---------------------------------------------------------
+   Center Content
+   --------------------------------------------------------- */
+
 .hero-center {
-  position: relative !important;
-  z-index: 100 !important;
+  position: relative;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Profile Image */
+/* ---------------------------------------------------------
+   Profile Image
+   --------------------------------------------------------- */
+
 .hero-profile-image {
   width: 220px;
   height: 220px;
@@ -182,73 +308,445 @@ Have fun creating your portfolio on this template!!! -->
   border-radius: 50%;
   display: block;
   margin: 0 auto;
+
   border: 4px solid #ffffff;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Floating Navigation Containers */
+/* ---------------------------------------------------------
+   Floating Navigation
+   --------------------------------------------------------- */
+
 .hero-nav {
-  position: absolute !important;
+  position: absolute;
+
   top: 50%;
   transform: translateY(-50%);
-  z-index: 500 !important;
+
+  z-index: 30;
+
   display: flex;
   flex-direction: column;
   gap: 55px;
-  pointer-events: auto !important;
+
+  pointer-events: auto;
 }
+
+/* LEFT SIDE */
 
 .hero-nav-left {
   left: 7%;
   align-items: flex-start;
 }
 
+/* RIGHT SIDE */
+
 .hero-nav-right {
   right: 7%;
   align-items: flex-end;
 }
 
-/* Floating Buttons */
+/* ---------------------------------------------------------
+   Floating Buttons
+   --------------------------------------------------------- */
+
 .hero-float-link {
   display: inline-block;
-  position: relative !important;
-  z-index: 501 !important;
+
   padding: 12px 20px;
+
   background: rgba(255, 255, 255, 0.62);
+
   border: 1px solid rgba(255, 255, 255, 0.8);
+
   border-radius: 30px;
+
   color: #272341 !important;
+
   font-size: 1rem;
   font-weight: 600;
+
   text-decoration: none !important;
-  box-shadow: 0 6px 20px rgba(80, 70, 100, 0.10);
+
+  box-shadow:
+    0 6px 20px rgba(80, 70, 100, 0.10);
+
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  cursor: pointer !important;
-  pointer-events: auto !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+  cursor: pointer;
+
+  position: relative;
+  z-index: 31;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
+
+/* Hover */
 
 .hero-float-link:hover {
   transform: translateY(-5px) scale(1.04);
+
   background: rgba(255, 255, 255, 0.90);
-  box-shadow: 0 10px 25px rgba(80, 70, 100, 0.18);
+
+  box-shadow:
+    0 10px 25px rgba(80, 70, 100, 0.18);
+
   color: #272341 !important;
+
   text-decoration: none !important;
 }
 
-/* Floating Animations */
-.hero-publications { animation: heroFloatOne 5s ease-in-out infinite; }
-.hero-beyond { animation: heroFloatTwo 6s ease-in-out infinite; }
-.hero-cv { animation: heroFloatThree 5.5s ease-in-out infinite; }
-.hero-contact { animation: heroFloatFour 6.5s ease-in-out infinite; }
+/* ---------------------------------------------------------
+   Floating Animations
+   --------------------------------------------------------- */
 
-@keyframes heroFloatOne { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes heroFloatTwo { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
-@keyframes heroFloatThree { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-@keyframes heroFloatFour { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+.hero-publications {
+  animation: heroFloatOne 5s ease-in-out infinite;
+}
 
-/* Get To Know Me Button */
+.hero-beyond {
+  animation: heroFloatTwo 6s ease-in-out infinite;
+}
+
+.hero-cv {
+  animation: heroFloatThree 5.5s ease-in-out infinite;
+}
+
+.hero-contact {
+  animation: heroFloatFour 6.5s ease-in-out infinite;
+}
+
+@keyframes heroFloatOne {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes heroFloatTwo {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+@keyframes heroFloatThree {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes heroFloatFour {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* ---------------------------------------------------------
+   Get To Know Me Button
+   --------------------------------------------------------- */
+
+.hero-center .hero-cta {
+  position: relative;
+  z-index: 40;
+}
+
+.hero-center .hero-cta a {
+  position: relative;
+  z-index: 41;
+  pointer-events: auto;
+}
+
+/* ---------------------------------------------------------
+   Scroll Arrow
+   --------------------------------------------------------- */
+
+.scroll-down-link {
+  position: absolute !important;
+
+  left: 50%;
+  bottom: 25px;
+
+  transform: translateX(-50%);
+
+  z-index: 35 !important;
+
+  pointer-events: auto !important;
+
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+  .hero-nav-left {
+    left: 3%;
+  }
+
+  .hero-nav-right {
+    right: 3%;
+  }
+
+  .hero-float-link {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  .hero-modern {
+    padding-bottom: 8rem !important;
+  }
+
+  .hero-nav {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+
+    transform: none;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: 20px;
+  }
+
+  .hero-nav-left,
+  .hero-nav-right {
+    align-items: center;
+  }
+
+  .hero-center {
+    order: 1;
+  }
+
+  .hero-nav-left {
+    order: 2;
+  }
+
+  .hero-nav-right {
+    order: 3;
+  }
+
+  .hero-float-link {
+    font-size: 0.85rem;
+    padding: 9px 14px;
+  }
+
+  .hero-profile-image {
+    width: 190px;
+    height: 190px;
+  }
+
+  .scroll-down-link {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------
+   Accessibility
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-publications,
+  .hero-beyond,
+  .hero-cv,
+  .hero-contact {
+    animation: none;
+  }
+
+  .hero-float-link {
+    transition: none;
+  }
+
+</style>
+</head>
+<body>
+
+<style>
+
+/* =========================================================
+   HERO — CENTER CONTENT
+   ========================================================= */
+
+.hero-modern {
+  position: relative !important;
+  z-index: 1;
+}
+
+.hero-center {
+  position: relative !important;
+  z-index: 100 !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+   ========================================================= */
+
+.hero-profile-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+
+  border: 4px solid #ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   FLOATING NAVIGATION
+   ========================================================= */
+
+.hero-nav {
+  position: absolute !important;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 500 !important;
+
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+
+  pointer-events: none;
+}
+
+
+/* LEFT */
+
+.hero-nav-left {
+  left: 7%;
+  align-items: flex-start;
+}
+
+
+/* RIGHT */
+
+.hero-nav-right {
+  right: 7%;
+  align-items: flex-end;
+}
+
+
+/* =========================================================
+   FLOATING BUTTONS
+   ========================================================= */
+
+.hero-float-link {
+  display: inline-block;
+
+  position: relative !important;
+  z-index: 501 !important;
+
+  padding: 12px 20px;
+
+  background: rgba(255, 255, 255, 0.62);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 30px;
+
+  color: #272341 !important;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  text-decoration: none !important;
+
+  box-shadow:
+    0 6px 20px rgba(80, 70, 100, 0.10);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  cursor: pointer !important;
+
+  pointer-events: auto !important;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* HOVER */
+
+.hero-float-link:hover {
+  transform: translateY(-5px) scale(1.04);
+
+  background: rgba(255, 255, 255, 0.90);
+
+  box-shadow:
+    0 10px 25px rgba(80, 70, 100, 0.18);
+
+  color: #272341 !important;
+
+  text-decoration: none !important;
+}
+
+
+/* =========================================================
+   GET TO KNOW ME BUTTON
+   ========================================================= */
+
 .hero-center .hero-cta {
   position: relative !important;
   z-index: 600 !important;
@@ -257,54 +755,116 @@ Have fun creating your portfolio on this template!!! -->
 .hero-center .hero-cta a {
   position: relative !important;
   z-index: 601 !important;
+
   pointer-events: auto !important;
   cursor: pointer !important;
 }
 
-/* Scroll Arrow */
+
+/* =========================================================
+   SCROLL DOWN ARROW
+   ========================================================= */
+
 .scroll-down-link {
   position: absolute !important;
+
   left: 50%;
   bottom: 25px;
+
   transform: translateX(-50%);
+
   z-index: 700 !important;
+
   display: block;
+
   pointer-events: auto !important;
+
   cursor: pointer !important;
 }
 
-/* Mobile Responsiveness */
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 767px) {
-  .hero-modern { padding-bottom: 8rem !important; }
+
+  .hero-modern {
+    padding-bottom: 8rem !important;
+  }
+
   .hero-nav {
     position: relative !important;
-    top: auto; left: auto; right: auto;
+
+    top: auto;
+    left: auto;
+    right: auto;
+
     transform: none;
+
     flex-direction: row;
     flex-wrap: wrap;
+
     justify-content: center;
+
     gap: 10px;
+
     width: 100%;
+
     margin-top: 20px;
+
     pointer-events: auto !important;
   }
-  .hero-nav-left, .hero-nav-right { align-items: center; }
-  .hero-center { order: 1; }
-  .hero-nav-left { order: 2; }
-  .hero-nav-right { order: 3; }
-  .hero-float-link { font-size: 0.85rem; padding: 9px 14px; }
-  .hero-profile-image { width: 190px; height: 190px; }
+
+  .hero-nav-left,
+  .hero-nav-right {
+    align-items: center;
+  }
+
+  .hero-center {
+    order: 1;
+  }
+
+  .hero-nav-left {
+    order: 2;
+  }
+
+  .hero-nav-right {
+    order: 3;
+  }
+
+  .hero-float-link {
+    font-size: 0.85rem;
+    padding: 9px 14px;
+  }
+
+  .hero-profile-image {
+    width: 190px;
+    height: 190px;
+  }
 }
 
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
-  #hero, #beyond-academia, #contact { animation: none; }
-  .hero-publications, .hero-beyond, .hero-cv, .hero-contact { animation: none; }
-  .hero-float-link { transition: none; }
+
+  .hero-publications,
+  .hero-beyond,
+  .hero-cv,
+  .hero-contact {
+    animation: none;
+  }
+
+  .hero-float-link {
+    transition: none;
+  }
 }
 
 </style>
-</head>
-<body>
+
 
 <!-- =========================================================
      HERO / WELCOME SECTION
@@ -312,144 +872,630 @@ Have fun creating your portfolio on this template!!! -->
 
 <section id="hero" class="jumbotron hero-modern">
 
+
   <!-- LEFT BUBBLES -->
+
   <div class="hero-nav hero-nav-left">
-    <a href="#publications" class="hero-float-link hero-publications">
+
+    <a
+      href="#publications"
+      class="hero-float-link hero-publications"
+    >
       Publications &amp; Working Papers
     </a>
-    <a href="#beyond-academia" class="hero-float-link hero-beyond">
+
+    <a
+      href="#beyond-academia"
+      class="hero-float-link hero-beyond"
+    >
       Beyond Academia
     </a>
+
   </div>
+
 
   <!-- RIGHT BUBBLES -->
+
   <div class="hero-nav hero-nav-right">
-    <a href="#resume" class="hero-float-link hero-cv">
+
+    <a
+      href="#resume"
+      class="hero-float-link hero-cv"
+    >
       CV
     </a>
-    <a href="#contact" class="hero-float-link hero-contact">
+
+    <a
+      href="#contact"
+      class="hero-float-link hero-contact"
+    >
       Contact
     </a>
+
   </div>
 
-  <!-- CENTER CONTENT -->
+
+  <!-- =======================================================
+       CENTER
+       ======================================================= -->
+
   <div class="container text-center hero-center">
+
+
+    <!-- PHOTO -->
+
     <div class="hero-icon mb-4">
+
       <img
         src="./assets/Icon%20pic%20with%20dogs.jpeg"
         alt="Xiaoran Liu with her dogs"
         class="hero-profile-image"
       />
+
     </div>
 
+
+    <!-- NAME -->
+
     <h1 class="hero-title mb-4">
+
       <span class="text-color-main name">
         Xiaoran (Livia) Liu
       </span>
+
     </h1>
 
+
+    <!-- GET TO KNOW ME -->
+
     <div class="hero-cta">
-      <a href="#about" class="cta-btn cta-btn--hero">
+
+      <a
+        href="#about"
+        class="cta-btn cta-btn--hero"
+      >
         Get to know me
       </a>
+
     </div>
+
   </div>
 
-  <!-- DOWN ARROW -->
-  <a href="#about" class="scroll-down-link" aria-label="Scroll to About Me">
+
+  <!-- =======================================================
+       DOWN ARROW
+       ======================================================= -->
+
+  <a
+    href="#about"
+    class="scroll-down-link"
+    aria-label="Scroll to About Me"
+  >
+
     <div class="scroll-down"></div>
+
   </a>
 
+
 </section>
-<!-- /END HERO SECTION -->
+
+
+<!-- =========================================================
+     END HERO
+     ========================================================= -->
+
 
 
 <!-- About Me Section -->
 <section id="about">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <div class="row about-wrapper">
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<div class="row about-wrapper">
 
-      <!-- Profile Picture -->
-      <div class="col-md-6 col-sm-12">
-        <div class="about-wrapper__image">
-          <img
-            class="img-fluid rounded shadow-lg"
-            height="auto"
-            width="300px"
-            src="./assets/att.MyBoZk40ZwI1MlLLWXt1rjefdOtGsXuYcGhXUdxvbHA.jpeg"
-            alt="Profile Picture"
-          />
-        </div>
-      </div>
+<!-- Profile Picture -->
+<div class="col-md-6 col-sm-12">
+<div class="about-wrapper__image">
+<img
+class="img-fluid rounded shadow-lg"
+height="auto"
+width="300px"
+src="./assets/att.MyBoZk40ZwI1MlLLWXt1rjefdOtGsXuYcGhXUdxvbHA.jpeg"
+alt="Profile Picture"
+/>
+</div>
+</div>
 
-      <!-- Bio Details -->
-      <div class="col-md-6 col-sm-12">
-        <div class="about-wrapper__info">
-          <p class="about-wrapper__info-text">
-            I am a PhD student at the NYU Silver School of Social Work. My background bridges empirical research in affective neuroscience with direct clinical social work in inpatient psychiatric settings.
-          </p>
-          <p class="about-wrapper__info-text">
-            My work focuses on leveraging human-centered technology and natural language processing (NLP) to promote mental health equity, understand cultural help-seeking behaviors, and inform ethically grounded social work practice.
-          </p>
-          <span class="d-flex mt-3">
-            <a target="_blank" class="cta-btn cta-btn--resume" href="#contact">
-              Get in Touch
-            </a>
-          </span>
-        </div>
-      </div>
+<!-- Bio Details -->
+<div class="col-md-6 col-sm-12">
+<div class="about-wrapper__info">
+<p class="about-wrapper__info-text">
+I am a PhD student at the NYU Silver School of Social Work. My background bridges empirical research in affective neuroscience with direct clinical social work in inpatient psychiatric settings.
+</p>
+<p class="about-wrapper__info-text">
+My work focuses on leveraging human-centered technology and natural language processing (NLP) to promote mental health equity, understand cultural help-seeking behaviors, and inform ethically grounded social work practice.
+</p>
+<span class="d-flex mt-3">
+<a target="_blank" class="cta-btn cta-btn--resume" href="#contact">
+Get in Touch
+</a>
+</span>
+</div>
+</div>
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 <!-- /END About Me Section -->
 
 
 <!-- Publications Section -->
 <section id="publications" style="padding: 60px 0;">
-  <div class="container" style="text-align: center;">
-    <div class="project-wrapper" style="max-width: 1000px; margin: 0 auto;">
-      <h2 class="section-title dark-blue-text" style="text-align: center !important;">
-        Publications &amp; Working Papers
-      </h2>
-      <p style="font-size: 0.95rem; font-style: italic; color: #666666; max-width: 600px; margin: 0 auto 30px auto; text-align: center !important;">
-        *Note: Publications are indexed under my formal name, Xiaoran Liu.
-      </p>
-      <div style="width: 100%; max-width: 800px; margin: 0 auto; text-align: center;">
-        <h3 style="font-size: 1.5rem; color: #272341; padding-bottom: 8px; margin: 0 auto 25px auto; text-align: center !important;">
-          Peer-Reviewed &amp; Conference Proceedings
-        </h3>
-      </div>
-    </div>
-  </div>
+<div class="container" style="text-align: center;">
+
+<div class="project-wrapper" style="max-width: 1000px; margin: 0 auto;">
+
+<h2 class="section-title dark-blue-text" style="text-align: center !important;">
+Publications & Working Papers
+</h2>
+
+<!-- Legal Name / Citation Note -->
+<p style="
+font-size: 0.95rem;
+font-style: italic;
+color: #666666;
+max-width: 600px;
+margin: 0 auto 30px auto;
+text-align: center !important;
+">
+*Note: Publications are indexed under my formal name, Xiaoran Liu.
+</p>
+
+<!-- Peer-Reviewed Publications -->
+<div style="
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+text-align: center;
+">
+
+<h3 style="
+font-size: 1.5rem;
+color: #272341;
+padding-bottom: 8px;
+margin: 0 auto 25px auto;
+text-align: center !important;
+">
+Peer-Reviewed & Conference Proceedings
+</h3>
+
+<!-- =========================================================
+     PUBLICATIONS & WORKING PAPERS
+     ========================================================= -->
+
+
+<!-- Publication 1 -->
+<div class="publication-item" style="
+  background: #ffffff;
+  padding: 25px;
+  margin: 0 auto 25px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+">
+
+  <p style="
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333333;
+    margin: 0;
+    padding-left: 0.5in;
+    text-indent: -0.5in;
+    text-align: left !important;
+  ">
+    Varadarajan, V., Mahwish, S., <strong>Liu, X.</strong>, Buffolino, J.,
+    Luhmann, C., Boyd, R., &amp; Schwartz, H. A. (2025).
+    Capturing human cognitive styles with language: Towards an experimental
+    evaluation paradigm.
+    <em>Proceedings of the 2025 Conference of the North American Chapter
+    of the Association for Computational Linguistics (NAACL)</em>.
+  </p>
+
+</div>
+
+
+<!-- Publication 2 -->
+<div class="publication-item" style="
+  background: #ffffff;
+  padding: 25px;
+  margin: 0 auto 25px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+">
+
+  <p style="
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333333;
+    margin: 0;
+    padding-left: 0.5in;
+    text-indent: -0.5in;
+    text-align: left !important;
+  ">
+    Varadarajan, V., Juhng, S., Mahwish, S., <strong>Liu, X.</strong>,
+    Luby, J., Luhmann, C., &amp; Schwartz, H. A. (2023).
+    Transfer and active learning for dissonance detection: Addressing the
+    rare-class challenge.
+    <em>arXiv preprint</em>.
+  </p>
+
+</div>
+
+
+<!-- Manuscripts in Submission & Working Papers -->
+<h3 style="
+  font-size: 1.5rem;
+  color: #272341;
+  padding-bottom: 8px;
+  margin: 40px auto 25px auto;
+  text-align: center !important;
+">
+  Manuscripts in Submission &amp; Working Papers
+</h3>
+
+
+<!-- Submission 1 -->
+<div class="publication-item" style="
+  background: #ffffff;
+  padding: 25px;
+  margin: 0 auto 25px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+">
+
+  <p style="
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333333;
+    margin: 0;
+    padding-left: 0.5in;
+    text-indent: -0.5in;
+    text-align: left !important;
+  ">
+    <strong>Liu, X.</strong>, &amp; An, R. (2027).
+    Understanding Asian American help-seeking through NLP towards
+    culturally responsive suicide prevention.
+    <em>Abstract submitted to the Society for Social Work and Research
+    (SSWR) 31st Annual Conference</em>.
+  </p>
+
+</div>
+
+</div>
+
+</div>
+</div>
 </section>
 <!-- /END Publications Section -->
 
 
-<!-- =========================================================
-     SMOOTH SCROLLING SCRIPT
-     ========================================================= -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const anchors = document.querySelectorAll('a[href^="#"]');
+<!--CV Section -->
+<section id="resume" style="padding: 60px 0;">
+<div class="container" style="text-align: center;">
+
+<h2 class="section-title" style="text-align: center !important;">
+CV
+</h2>
+
+<div style="
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+text-align: center;
+">
+
+<p class="lead" style="
+font-size: 1.15rem;
+line-height: 1.8;
+color: #333333;
+margin: 0 auto 25px auto;
+text-align: center !important;
+">
+My professional background spans clinical social work in inpatient
+psychiatric units, computational research in natural language
+processing (NLP), and affective neuroscience.
+</p>
+
+<div style="
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+">
+
+<a
+  href="assets/Livia Resume 8-31.pdf"
+  target="_blank" 
+        rel="noopener noreferrer"
+        class="cta-btn cta-btn--resume"
+        style="display: inline-block; text-align: center;"
+      >
+        View Full CV
+      </a>
+
+
     
-    anchors.forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href').substring(1);
-        if (!targetId) return;
+
         
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          e.preventDefault();
-          targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
+
+   
+
+</div>
+</div>
+</section>
+<!-- /END CV Section -->
+
+
+<!-- Beyond Academia Section -->
+<section id="beyond-academia" style="padding: 60px 0; text-align: center !important;">
+
+<div class="container" style="text-align: center !important;">
+
+<h2 class="section-title" style="text-align: center !important;">
+Beyond Academia
+</h2>
+
+<div style="
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+text-align: center !important;
+">
+
+<!-- Photo -->
+<div style="
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+margin: 0 auto 30px auto;
+">
+<img
+src="./assets/Photo%20w/Photo%20with%20dogs.jpeg"
+alt="Xiaoran Liu with dogs"
+style="
+width: 450px;
+max-width: 100%;
+height: auto;
+display: block;
+margin: 0 auto;
+border-radius: 12px;
+box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+"
+/>
+</div>
+
+<!-- Bio Text -->
+<p style="
+font-size: 1.1rem;
+line-height: 1.8;
+color: #333333;
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+text-align: center !important;
+">
+Outside of research and clinical work, I love spending time outdoors,
+whether skiing, kayaking, camping, or hiking with my two poodles, Phoebe and
+Powder. I am also passionate about wildlife rehabilitation and local
+bird rescue, caring for my three resident birds at home: Hope, Happy,
+and Blue.
+
+
+
+
+
+   
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- /END Beyond Academia Section -->
+
+
+
+<!-- =========================================================
+     CONTACT / FINAL SECTION
+     ========================================================= -->
+
+<section id="contact">
+
+  <div class="container" style="
+    text-align: center;
+  ">
+
+    <!-- Contact Heading -->
+    <h2 class="section-title" style="
+      text-align: center !important;
+    ">
+      Contact
+    </h2> 
+
+
+    <!-- Contact Content -->
+    <div class="contact-wrapper" style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+    ">
+
+      <!-- Collaboration Message -->
+      <p class="contact-wrapper__text" style="
+        text-align: center !important;
+        margin: 0 auto 25px auto;
+      ">
+        Interested in collaborating on computational social science
+        or digital mental health equity?
+      </p>
+
+
+      <!-- Email Button -->
+      <a
+        href="mailto:xl6461@nyu.edu"
+        class="cta-btn cta-btn--resume"
+      >
+        Email Me
+      </a>
+
+
+      <!-- Academic & Professional Links -->
+      <div class="social-links" style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        margin-top: 35px;
+      ">
+
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/xiaoran-livia-liu-lmsw-6012a27a/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+
+        <!-- Google Scholar -->
+        <a
+          href="https://scholar.google.com/citations?hl=en&user=XgyRcIoAAAAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Scholar"
+        >
+          <i class="fa-solid fa-graduation-cap"></i>
+        </a>
+
+
+        <!-- PubMed -->
+        <a
+          href="https://www.ncbi.nlm.nih.gov/myncbi/livia.liu.2/bibliography/public/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="PubMed"
+        >
+          <i class="fa-solid fa-book-medical"></i>
+        </a>
+
+      </div>
+
+
+      <!-- Copyright -->
+      <p style="
+        margin: 30px auto 0 auto;
+        font-size: 0.9rem;
+        color: #555555;
+        text-align: center !important;
+      ">
+        &copy; <span id="year"></span> — Xiaoran (Livia) Liu
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- /END Contact Section -->
+
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  
+  <script>
+/* =========================================================
+   Scroll Reveal Animation
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const revealElements = document.querySelectorAll(
+    "#about .section-title, " +
+    "#about .about-wrapper, " +
+    "#publications .section-title, " +
+    "#publications .row, " +
+    "#resume .section-title, " +
+    "#resume .row, " +
+    "#beyond-academia .section-title, " +
+    "#beyond-academia .container > div, " +
+    "#contact .section-title, " +
+    "#contact .contact-wrapper"
+  );
+
+  revealElements.forEach(function (element) {
+    element.classList.add("scroll-reveal");
   });
+
+  const observer = new IntersectionObserver(
+    function (entries, observer) {
+
+      entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("is-visible");
+
+          observer.unobserve(entry.target);
+
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  revealElements.forEach(function (element) {
+    observer.observe(element);
+  });
+
+});
+</script>
+<script src="./javascript/vanilla-tilt.min.js"></script>
+<script type="text/javascript" src="./javascript/valtilt.js"></script>
+   <script>
+function scrollToSection(sectionId) {
+
+  const section = document.getElementById(sectionId);
+
+  if (!section) {
+    console.log("Section not found:", sectionId);
+    return;
+  }
+
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+}
 </script>
 
 </body>
